@@ -1,0 +1,136 @@
+.container {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 50%;
+}
+
+@media (min-width: 600px) {
+  .container {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+.wrapper {
+  height: 302px;
+  padding: 5rem 1rem;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #d7f3f6 4.97%,
+    rgba(215, 243, 246, 0.46) 54.86%,
+    rgba(215, 243, 246, 0) 100%
+  );
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    height: 240px;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  .wrapper p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    height: 176px;
+    border-radius: 1.175rem 1.175rem 0 0;
+  }
+
+  .wrapper p {
+    max-width: 122px;
+    font-size: 1.125rem;
+  }
+}
+
+.p {
+  margin: 0;
+  line-height: 1;
+  font-size: 2.5rem;
+  font-family: Aeonik, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .p {
+    font-size: 1.125rem;
+  }
+}

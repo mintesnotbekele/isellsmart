@@ -1,0 +1,102 @@
+/* container */
+.container {
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 600px) {
+  .container {
+    margin-top: 4rem;
+  }
+}
+/*  left coanteinr*/
+.top_container {
+  max-width: 80%;
+}
+
+.top_header {
+  margin: 0;
+  line-height: 1;
+  font-size: 5rem;
+  font-family: Aeonik, Helvetica Neue, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  max-width: 1045px;
+}
+@media (max-width: 1200px) {
+  .top_header {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 900px) {
+  .top_header {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .top_header {
+    font-size: 1.875rem;
+  }
+}
+.top_header_span {
+  padding-bottom: 1rem;
+  background: linear-gradient(180deg, #fed0ab 20%, #b0ade9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .top_header {
+    max-width: 295px;
+  }
+}
+/*right  container  */
+
+.bottom_container {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .bottom_container {
+    margin-top: 1rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .bottom_container::-webkit-scrollbar {
+    display: none;
+  }
+}
+/*  */
+@media (max-width: 600px) {
+  .bottom_container_wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    margin-left: calc((55vw + 3rem) * -1);
+  }
+}

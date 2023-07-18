@@ -1,0 +1,46 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+strong,
+b {
+  font-weight: 700;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  color: #fff;
+  line-height: 1;
+  font-size: 3.625rem;
+  font-family: Aeonik, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  background-color: #000;
+}
+@media (max-width: 900px) {
+  body {
+    font-size: 2.625rem;
+  }
+}
+span {
+  margin-left: 10px;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 1.625rem;
+  }
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #000;
+}
