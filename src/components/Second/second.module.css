@@ -73,9 +73,9 @@
 .second_left_half_header {
   margin: 0;
   line-height: 1;
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: Aeonik, Helvetica Neue, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,7 +85,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   display: inline-block;
-  max-width: 545px;
+  max-width: 745px;
 }
 @media (max-width: 1200px) {
   .second_left_half_header {

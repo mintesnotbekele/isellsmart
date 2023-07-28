@@ -14,6 +14,7 @@ function SecondCard() {
             maxWidth: "450px",
           }}
         >
+          <br></br>
           Fill out all the details including your personal info
         </p>
       </div>

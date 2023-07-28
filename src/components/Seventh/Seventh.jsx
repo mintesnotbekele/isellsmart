@@ -202,7 +202,7 @@ function Seventh() {
             viewport={{ once: true }}
             className={styles.header}
           >
-With ISellSmart, you can get a great value for your current device
+With iCellSmart, you can get a great value for your current device
             and apply it toward a new one
           </motion.h1>
         </div>

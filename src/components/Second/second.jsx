@@ -17,13 +17,11 @@ function Second() {
       <div className={styles.second}>
         <div className={styles.second_left_half}>
           <h2 className={styles.second_left_half_header}>
-                Trade in. Upgrade. Save. It’s a win-win-win.
-            <span className={styles.second_header_span} style={{ zIndex: 999 }}>
-              {" "}
-                {/* With ISellSmart you can get a great value for your current
-                device and apply it toward a new one. And you can do it all
-                online thorugh our website */}
-            </span>
+                Trade in. Upgrade. Save. 
+            <h2 className={styles.second_left_half_header}>
+              It’s a win-win with iCellSmart
+
+            </h2>
           </h2>
           <button className={styles.button}>
             <a className={styles.button_anchor} href="#request-demo">

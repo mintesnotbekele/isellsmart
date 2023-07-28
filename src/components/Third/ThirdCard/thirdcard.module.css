@@ -138,9 +138,9 @@
 .left_header {
   margin: 0;
   line-height: 1;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: Aeonik, Helvetica Neue, sans-serif;
-  font-weight: 400;
+  font-weight: 350;
   color: #fff;
 }
 @media (max-width: 1200px) {

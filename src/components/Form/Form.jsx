@@ -1,8 +1,12 @@
-import React,{useState} from "react";
+import React from "react";
 import styles from "./form.module.css";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import axios from 'axios';
+import axios from "axios";
+import { FaCheckSquare, FaRegSquare } from "react-icons/fa";
+
 function Form() {
+  
   const [formData, setFormData] = useState({
     name: '',
     model: '',
@@ -17,43 +21,99 @@ function Form() {
     powerOn: '',
     functional: '',
     crackFree: '',
-    images: [],
-  });
+    images:[]
+  })
+  
+  const [submitSuccess,setSubmitSuccess] = useState('')
+  const [images, setImages] = useState([]);
+  const [name, setName] = useState('');
+  const [description,setDescription]= useState('')
+  const [fullName,setFullName]= useState('')
+  const [email,setEmail] = useState('');
+  const [whatsappNumber,setWhatsappNumber]= useState('')
+  const [location,setLocation]= useState('')
+  const [meetingDate,setMeetingDate]= useState('')
+  const [price,setPrice]= useState('')
+  const [modeOfPayment,setModeOfPayment]= useState('')
+  const [powerOn,setPowerOn]= useState('')
+  const [functional,setFunctional]= useState('')
+  const [crackFree,setCrackFree]= useState('')
+  const [model, setModel] = useState('');
 
-  const handleChange = (event) => {
-    const { name, type, value, checked, files } = event.target;
-    const newValue = type === 'checkbox' ? checked : files ? Array.from(files) : value;
-    setFormData((prevData) => ({ ...prevData, [name]: newValue }));
+  const handleImageChange = (e) => {
+    const { files } = e.target;
+    const selectedImages = Array.from(files);
+    setImages(selectedImages);
+  };
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+
+    console.log(name," value", checked);
+    if(name == 'powerOn') {
+      setPowerOn(checked)
+    }
+    if(name == 'functional') {
+      setFunctional(checked)
+    }
+    if(name == 'crackFree') {
+      setCrackFree(checked)
+    }
+  };
+  const handleNotificationClose = () => {
+    setSubmitSuccess(false);
   };
 
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Send formData to endpoint
+    const formDate = new FormData();
+    formDate.append("name", name);
+    formDate.append("description", description);
+    formDate.append("fullName", fullName);
+    formDate.append("email", email);
+    formDate.append("whatsappNumber", whatsappNumber);
+    formDate.append("location", location);
+    formDate.append("meetingDate", meetingDate);
+    formDate.append("price", price);
+    formDate.append("modeOfPayment", modeOfPayment);
+    formDate.append("powerOn", powerOn);
+    formDate.append("crackFree", crackFree);
+    formDate.append("functional", functional);
+    formDate.append("model", model);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(" Form : ", formData);
-     const URL= "https://i-sell-smart.onrender.com/api/item/create"
-                // Send form data to API
-    axios.post(URL, formData, {
-      headers: {
-    'Content-Type': 'multipart/form-data'
-      }
+    images.map((image) => {
+      formDate.append("images",image)
     })
-      .then(response => {
-                console.log(" Response ",response)
-                  if (response.ok) {
-                    alert('Form submitted successfully!');
-                    setFormData([])
-                  } else {
-                    alert('Form submission failed. Please try again.');
-                  }
-                })
-           .catch(error => {
-                  console.error('Error:', error);
-            });
-    // handle form submission here
+    console.log(" Form Data ",formDate)
+
+    axios.post('https://i-sell-smart.onrender.com/api/item/create', formDate, {
+      headers: {
+      'Content-Type': 'multipart/form-data'
+      }
+    }).then((response) => {
+      console.log(" Response ", response)
+      setSubmitSuccess(true)
+      setImages([])
+      setName('')
+      setDescription('')
+      setFullName('')
+      setEmail('')
+      setWhatsappNumber('')
+      setLocation('')
+      setMeetingDate('')
+      setPowerOn('')
+      setCrackFree('')
+      setFunctional('') 
+      setModel('')
+      setPrice('')
+    }).catch((error) => {
+      console.log(" Error ",error)
+    })
   };
 
   return (
-    <form className={styles.container} id="request-demo" method="POST" onSubmit={handleSubmit} enctype="application/x-www-form-urlencoded">
+    <form  onSubmit={handleSubmit} id="request-demo" style={{ backgroundColor: "black", width: "80%", margin: "0 auto" }}>
       <div style={{ opacity: 1 }}>
         <motion.h2
           initial={{ opacity: 0 }}
@@ -67,8 +127,9 @@ function Form() {
           whileInView={{ opacity: 1 }}
           className={styles.header}
         >
-     Start selling your Iphone now
+          Start selling your iphone now
         </motion.h2>
+        <br></br>
       </div>
       <div style={{ opacity: 1 }}>
         <motion.h6
@@ -83,14 +144,15 @@ function Form() {
           whileInView={{ opacity: 1 }}
           className={styles.sub_header}
         >
-Fill up all the details and complete the process
+        Fill up all the details and complete the process
         </motion.h6>
       </div>
       <div className={styles.form_container}>
         <div
           style={{
             opacity: 1,
-          }}>
+          }}
+        >
           <motion.div
             initial={{ opacity: 0 }}
             transition={{
@@ -104,128 +166,202 @@ Fill up all the details and complete the process
             className={styles.form_wrapper}
           >
             
-          <span>
-            <h4>Phone  Details</h4>
-            <input
-              required
-                type="text"
-                name="name"
-              className={styles.input}
-                placeholder="Phone Name"
-                onChange={handleChange}
-              />
-            <input
-              required
-                type="text"
-                name="model"
-              className={styles.input}
-                placeholder="Phone Model"
-                                onChange={handleChange}
-
-              />
-            <textarea
-                required
-                rows={4}
-              type="textarea"
-              name="description"
-              className={styles.input}
-                placeholder="Phone Description"
-                                onChange={handleChange}
-
-              />
-             
-          </span>
-          <span>
-            <h4>Seller Details</h4>
-            <input
-              required
-              type="text"
-              name="fullName"
-              className={styles.input}
-                placeholder="Full Name"
-                                onChange={handleChange}
-
-              // value={formData.fullName}
-              />
-            <input
-              required
-              type="email"
-              name="email"
-              className={styles.input}
-                placeholder="Email"
-                                onChange={handleChange}
-
-              // value={formData.email}
-              />
-            <input
-               required
-                type="text"
-              name="whatsappNumber"
-              className={styles.input}
-                placeholder="Whatsapp Number"
-                                onChange={handleChange}
-
-                // value={formData.whatsappNumber}
-              />
-            <input
-              required
-              name="location"
-              type="text"
-              className={styles.input}
-                placeholder="Location"
-                                onChange={handleChange}
-
-                // value={formData.location}
-            />
-             <input
-              required
-                type="number"
-                name="price"
-              className={styles.input}
-                placeholder="Price"
-                                onChange={handleChange}
-
-                // value={formData.price}
-              />
-              <input
-                required
-              name="meetingDate"
-              type="datetime-local"
-              className={styles.input}
-                placeholder="Time and Data of Meeting"
-                                onChange={handleChange}
-
-                // value={formData.meetingDate}
-              />
-              <label for="modeOfPayment">  Mode of Payment      </label>
-              <select  name="modeOfPayment"  required                  onChange={handleChange}
->
-                <option value="Cash">Cash</option>
-                <option value="PayPal">PayPal</option>
-                <option value="Transfer">Transfer</option>
-                <option value="Pickup">Pickup</option>
-              </select>
-              <br>
-              </br>
-            </span>
-
-            <span>
-              <h4>Phone Condition</h4>
-              <input type="checkbox" id="powerOn" name="powerOn" value="Yes" onChange={handleChange}/>
-                <label for="powerOn"> Does the device power on?</label><br></br>
-              <input type="checkbox" id="functional" name="functional" value="Yes" onChange={handleChange}/>
-                <label for="functional">Is the device fully functional and all parts of the screen light up correctly?</label><br></br>
-              <input type="checkbox" id="crackFree" name="crackFree"   value="Yes"  onChange={handleChange}/>
-               <label for="crackFree">Are the front and back free of cracks?</label>
-              <input type="file"  id="images"     name="images"   multiple accept="image/*" onChange={handleChange} required />
-                    
-            </span>
           </motion.div>
-            <button className={styles.button}>Submit</button>
         </div>
       </div>
-    </form>
+      
+      <div className={styles.contain}>
+        <div className={styles.contain1}>
+        <label>
+        Full Name
+        <input
+          type="text"
+          name="fullName"
+          value={fullName}
+          onChange={(e)=>setFullName(e.target.value)}
+        />
+      </label>
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e)=>setEmail(e.target.value)}
+        />
+      </label>
+      <label>
+        WhatsApp Number
+        <input
+          type="tel"
+          name="whatsappNumber"
+          value={whatsappNumber}
+          onChange={(e)=>setWhatsappNumber(e.target.value)}
+        />
+      </label>
+      <label>
+        Location of Meeting
+        <input
+          type="text"
+          name="location"
+          value={location}
+          onChange={(e)=>setLocation(e.target.value)}
+        />
+      </label>
+      <label>
+        Time of Meeting
+        <input
+          type="datetime-local"
+          name="meetingDate"
+          value={meetingDate}
+          onChange={(e)=>setMeetingDate(e.target.value)}
+          />
+      </label>
+          </div>
+        <div className={styles.contain2}>
+          
+      <label>
+        Phone Name
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e)=>setName(e.target.value)}
+        />
+      </label>
+      <label>
+        Model
+        <input
+          type="text"
+          name="model"
+          value={model}
+          onChange={(e)=>setModel(e.target.value)}
+        />
+      </label>
+      <label>
+        Description
+        <textarea
+          name="description"
+          rows={3}
+          value={description}
+          onChange={(e)=>setDescription(e.target.value)}
+        ></textarea>
+        </label>
+        {/* </div> */}
+              <label style={{ display: "flex", alignItems: "left" }}>     Phone Condition </label>
+
+      <label style={{ display: "flex", alignItems: "left" }}>
+        {powerOn ? (
+          <FaCheckSquare style={{ marginRight: "10px" }} />
+        ) : (
+          <FaRegSquare style={{ marginRight: "10px" }} />
+        )}
+         <span style={{ display: "inline-block", marginRight: "10px" }}>
+          Does the device power on?
+        </span>
+        <input
+          type="checkbox"
+          name="powerOn"
+          checked={powerOn}
+          onChange={handleCheckboxChange}
+          style={{ display: "none" }}
+
+          />
+        {/* Does the device power on? */}
+          </label>
+      <label style={{ display: "flex", alignItems: "left" }}>
+        {functional ? (
+          <FaCheckSquare style={{ marginRight: "10px" }} />
+        ) : (
+          <FaRegSquare style={{ marginRight: "10px" }} />
+        )}
+        <span style={{ display: "inline-block", marginRight: "10px" }}>
+          Does the device fully functional?
+        </span>
+
+        <input
+          type="checkbox"
+          name="functional"
+          checked={functional}
+          onChange={handleCheckboxChange}
+           style={{ display: "none" }}
+
+          />
+          {/* Does the device fully functional? */}
+      </label>
+      <label style={{ display: "flex", alignItems: "left" }}>
+         {crackFree ? (
+          <FaCheckSquare style={{ marginRight: "10px" }} />
+        ) : (
+          <FaRegSquare style={{ marginRight: "10px" }} />
+        )}
+        <span style={{ display: "inline-block", marginRight: "10px" }}>
+          Are the front and back free of cracks?
+        </span>
+        <input
+          type="checkbox"
+          name="crackFree"
+          checked={crackFree}
+          onChange={handleCheckboxChange}
+          style={{ display: "none" }}
+          />
+        {/* Are the front and back free of cracks? */}
+          </label>
+          <br></br>
+      <label>
+        Price
+        <input
+          type="number"
+          name="price"
+          value={price}
+          onChange={(e)=>setPrice(e.target.value)}
+        />
+      </label>
+      <label>
+        Payment Method
+        <select name="modeOfPayment" value={modeOfPayment} onChange={(e)=>setModeOfPayment(e.target.value)}>
+          <option value="">Select payment method</option>
+          <option value="Cash">Cash</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Paypal">Paypal</option>
+          <option value="Transfer">Transfer</option>
+        </select>
+      </label>
+      <label>
+        Images (Max 5)
+        <input type="file" name="images" onChange={handleImageChange} multiple required/>
+      </label>
+      <div>
+        {images.map((image, index) => (
+          <img key={index} src={URL.createObjectURL(image)} alt={`Image ${index}`} width="200" height="200" />
+        ))}
+        </div>
+        </div>
+      </div>
+
+       <div className="form-buttons" style={{ textAlign: "right" }}>
+         <button type="submit" style={{ backgroundColor: 'white', color: 'black', padding: '12px 24px', borderRadius: '5px', fontWeight: 'bold', fontSize: '16px', border: 'none', cursor: 'pointer', transition: 'all 0.3s ease-in-out' }}>Submit</button>
+      </div>
+      {/* {submitSuccess &&
+        (
+        <div
+          style={{
+            marginTop: "10px",
+            backgroundColor: "green",
+            color: "white",
+            padding: "5px",
+            borderRadius: "5px",
+            position: "fixed",
+            top:"10px"
+          }}>
+            Your form has been submitted successfully!
+            <button onClick={handleNotificationClose} style={{ marginLeft: "10px", backgroundColor: "white", color: "green", border: "none", borderRadius: "5px", cursor: "pointer" }}>X</button>
+          </div>)
+      } */}
+      
+      </form>
   );
 }
+
 
 export default Form;

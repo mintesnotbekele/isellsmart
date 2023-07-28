@@ -113,7 +113,7 @@
   }
 }
 .left h3 {
-  color: #b0ade9;
+  color: white;
   font-weight: bold;
 }
 .left p {
@@ -138,7 +138,7 @@
 .left_header {
   margin: 0;
   line-height: 1;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: Aeonik, Helvetica Neue, sans-serif;
   font-weight: 400;
   color: #fff;

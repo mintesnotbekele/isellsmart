@@ -15,6 +15,7 @@ function FirstCard({ title, subtitle }) {
         >
 Select Your Iphone Model
         </h3>
+        <br></br>
         <p
           className={styles.bottom_first_left_p}
           style={{

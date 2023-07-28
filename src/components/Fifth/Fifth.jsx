@@ -34,11 +34,11 @@ function Fifth() {
               viewport={{ once: true }}
               className={styles.header}
             >
-              All the reasons to trade in with ISellSmart. Including one very big ne.
-              <span>you'll never miss a work with I Sell Smart</span>
-              <li>Trust & Transparency</li>
-              <li>Convenience</li>
-              <li>Trade in Price - Promise</li>
+              All the reasons to trade in with iCellSmart. Including one very big.
+              <br />
+              <span>You'll never miss a work with iCellSmart</span>
+              <h5>Trust & Transparency</h5>
+              <h5>Trade in Price - Promise</h5>
             </motion.h2>
           </div>
         </div>
@@ -67,11 +67,9 @@ function Fifth() {
             >
               <SwiperSlide className={styles.slide_item}>
                 <p className={styles.fifth_slide_p}>
-                  <span>Sell Your Iphone</span>
-                  <br />
-Hand in your old phone.
-Get cash in hand.
-                  It’s really that easy
+                  <span>Sell Your Iphone.</span>
+                  <br></br>
+                  Hand in your old phone Get cash in hand. It’s really that easy
                 </p>
               </SwiperSlide>
               <SwiperSlide className={styles.slide_item}>

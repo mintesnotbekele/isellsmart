@@ -32,11 +32,12 @@
 }
 
 .top_header {
-  margin: 0;
+  margin: 10;
+  margin-bottom: 10px;
   line-height: 1;
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: Aeonik, Helvetica Neue, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   text-align: center;
   color: #fff;
   text-align: center;

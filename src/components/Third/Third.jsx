@@ -25,8 +25,14 @@ function Third() {
             className={styles.top_header}
           >
             <span className={styles.top_header_span}>
-          Power the smartphone and mobile device
-            recommerce revolution with our technology at ISellSmart
+          Power the smartphone and mobile device.
+            </span>
+            <br>
+              </br>
+            <br>
+            </br>
+          <span className={styles.top_header}>
+              Recommerce revolution with our technology at iCellSmart
             </span>
           </motion.h2>
         </div>

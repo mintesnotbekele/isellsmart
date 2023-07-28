@@ -7,6 +7,7 @@ function FourthCard() {
     <div className={styles.container}>
       <div className={styles.left}>
         <h3 className={styles.left_header}>Get Paid Instantly</h3>
+        <br></br>
         <p className={styles.left_p}>
 Get paid for your Iphone using any Modes of Payment available in our website
         </p>

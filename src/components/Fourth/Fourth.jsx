@@ -19,8 +19,8 @@ function Fourth() {
             viewport={{ once: true }}
             className={styles.header}
           >
-            The trusted destination for selling your used iPhones.
-            <span>ISellSmart</span>
+            {/* The trusted destination for selling your used iPhones. */}
+            {/* <span>iCellSmart</span> */}
           </motion.h2>
         </div>
         <div style={{ opacity: 1 }}>
