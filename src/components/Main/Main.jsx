@@ -1,13 +1,13 @@
 import React from "react";
 import Fifth from "../Fifth/Fifth";
 import First from "../First/First";
-import Form from "../Form/Form";
 import Fourth from "../Fourth/Fourth";
 import Second from "../Second/second";
 import Seventh from "../Seventh/Seventh";
 import Sixth from "../Sixth/Sixth";
 import Third from "../Third/Third";
 import styles from "./main.module.css";
+import Phones from "../Phones/Phones";
 function Main() {
   return (
     <div className={styles.main}>
@@ -18,7 +18,7 @@ function Main() {
       <Fifth />
       <Sixth />
       <Seventh />
-      <Form />
+      <Phones />
     </div>
   );
 }

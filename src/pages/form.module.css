@@ -15,53 +15,47 @@
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 6rem;
-  color:#fff
+  color: #fff;
 }
 
-.contain{
- display:flex;
- width:80vw;
- align-items:start;
- justify-content:space-around;
-
+.contain {
+  display: flex;
+  width: 80vw;
+  align-items: start;
+  justify-content: space-around;
 }
 .contain1 {
-  margin:10px;
-  width:40%;
-
+  margin: 10px;
+  width: 40%;
 }
 .contain2 {
   margin: 10px;
-  width:40%;
+  width: 40%;
   /* display: flex; */
   /* width: 100vw;
-  align-items: center; */
-
+    align-items: center; */
 }
 @media (max-width: 900px) {
   .container {
     margin: 4rem 0;
   }
   .contain {
-      display: flex;
-      width: 80vw;
-      align-items: start;
-      justify-content: space-around;
-      flex-direction:column;
-  
-    }
-  
-    .contain1 {
-      margin: 10px;
-      width: 80%
-  
-    }
-  
-    .contain2 {
-      margin: 10px;
-      width: 80%;
-  
-    }
+    display: flex;
+    width: 80vw;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .contain1 {
+    margin: 10px;
+    width: 80%;
+  }
+
+  .contain2 {
+    margin: 10px;
+    width: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -108,7 +102,7 @@ select {
   width: 100%;
   padding: 20px;
   /* margin-bottom: 20px; */
-  margin:20px;
+  margin: 20px;
   box-sizing: border-box;
   font-size: 16px;
   border-radius: 5px;
@@ -119,10 +113,10 @@ select {
 }
 
 /* input[type="checkbox"] {
-  display:inline-block;
-  margin-right: 5px;
-  vertical-align:auto;
-} */
+    display:inline-block;
+    margin-right: 5px;
+    vertical-align:auto;
+  } */
 
 button[type="submit"] {
   background-color: white;
@@ -173,7 +167,6 @@ button[type="submit"]:hover {
   .sub_header {
     font-size: 1.5rem;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -252,37 +245,37 @@ button[type="submit"]:hover {
   }
 }
 /* 
-.form_wrapper.Mui-disabled {
-  color: rgba(0, 0, 0, 0.38);
-  cursor: default;
-}
-
-.form_wrapper:hover .MuiOutlinedInput-notchedOutline {
-  border-color: #fff;
-}
-
-@media (hover: none) {
-  .form_wrapper:hover .MuiOutlinedInput-notchedOutline {
-    border-color: rgba(0, 0, 0, 0.23);
+  .form_wrapper.Mui-disabled {
+    color: rgba(0, 0, 0, 0.38);
+    cursor: default;
   }
-}
-
-.form_wrapper.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: #556cd6;
-  border-width: 2px;
-}
-
-.form_wrapper.Mui-error .MuiOutlinedInput-notchedOutline {
-  border-color: #ff0000;
-}
-
-.form_wrapper.Mui-disabled .MuiOutlinedInput-notchedOutline {
-  border-color: rgba(0, 0, 0, 0.26);
-}
-
-.form_wrapper.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border: none;
-} */
+  
+  .form_wrapper:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #fff;
+  }
+  
+  @media (hover: none) {
+    .form_wrapper:hover .MuiOutlinedInput-notchedOutline {
+      border-color: rgba(0, 0, 0, 0.23);
+    }
+  }
+  
+  .form_wrapper.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #556cd6;
+    border-width: 2px;
+  }
+  
+  .form_wrapper.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #ff0000;
+  }
+  
+  .form_wrapper.Mui-disabled .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.26);
+  }
+  
+  .form_wrapper.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: none;
+  } */
 
 .form_wrapper input {
   padding: 25px 0 25px 25px;
@@ -364,65 +357,65 @@ button[type="submit"]:hover {
   -webkit-appearance: none;
 }
 /* 
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input::-webkit-input-placeholder {
-  opacity: 0 !important;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input::-moz-placeholder {
-  opacity: 0 !important;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input:-ms-input-placeholder {
-  opacity: 0 !important;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input::-ms-input-placeholder {
-  opacity: 0 !important;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input:focus::-webkit-input-placeholder {
-  opacity: 0.42;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input:focus::-moz-placeholder {
-  opacity: 0.42;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input:focus:-ms-input-placeholder {
-  opacity: 0.42;
-}
-
-label[data-shrink="false"]
-  + .MuiInputBase-formControl
-  .input:focus::-ms-input-placeholder {
-  opacity: 0.42;
-}
-
-.input.Mui-disabled {
-  opacity: 1;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0.38);
-}
-
-.input:-webkit-autofill {
-    -webkit-animation-duration: 5000s;
-    animation-duration: 5000s;
-    -webkit-animation-name: mui-auto-fill;
-    animation-name: mui-auto-fill;
-} */
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input::-webkit-input-placeholder {
+    opacity: 0 !important;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input::-moz-placeholder {
+    opacity: 0 !important;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input:-ms-input-placeholder {
+    opacity: 0 !important;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input::-ms-input-placeholder {
+    opacity: 0 !important;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input:focus::-webkit-input-placeholder {
+    opacity: 0.42;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input:focus::-moz-placeholder {
+    opacity: 0.42;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input:focus:-ms-input-placeholder {
+    opacity: 0.42;
+  }
+  
+  label[data-shrink="false"]
+    + .MuiInputBase-formControl
+    .input:focus::-ms-input-placeholder {
+    opacity: 0.42;
+  }
+  
+  .input.Mui-disabled {
+    opacity: 1;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.38);
+  }
+  
+  .input:-webkit-autofill {
+      -webkit-animation-duration: 5000s;
+      animation-duration: 5000s;
+      -webkit-animation-name: mui-auto-fill;
+      animation-name: mui-auto-fill;
+  } */
 
 .input:-webkit-autofill {
   border-radius: inherit;
