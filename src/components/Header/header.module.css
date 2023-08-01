@@ -132,7 +132,6 @@
   margin-left: 0.5rem;
   width: 160px;
   object-fit: contain;
-  height: 50px;
 }
 
 @media (max-width: 900px) {

@@ -3,7 +3,6 @@ import styles from "./header.module.css";
 import { useMediaQuery } from "react-responsive";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
-import AUP from '../../../src/assets/images/logois.png'
 function Header() {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 900px)",
@@ -49,7 +48,7 @@ function Header() {
             viewport={{
               once: true,
             }}
-            src={AUP}
+            src={"1.png"}
             className={styles.logo}
             alt=""
           />
