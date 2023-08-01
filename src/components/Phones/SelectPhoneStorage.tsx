@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { BsPencilSquare } from "react-icons/bs";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function SelectPhoneStorage({
   setPhoneModel,
   setCarrier,
@@ -15,10 +15,10 @@ export default function SelectPhoneStorage({
   const navigate = useNavigate();
   const phoneStorage = useMemo(
     () => [
-      "iPhone 14 Pro 128GB (AT&T)",
-      "iPhone 14 Pro 256GB (AT&T)",
-      "iPhone 14 Pro 512GB (AT&T)",
-      "iPhone 14 Pro 1TB (AT&T)",
+      `${phoneModel} 64GB (AT&T)`,
+      `${phoneModel} 128GB (AT&T)`,
+      `${phoneModel} 256GB (AT&T)`,
+      `${phoneModel} 512GB (AT&T)`,
     ],
     []
   );
@@ -57,7 +57,7 @@ export default function SelectPhoneStorage({
             cursor: "pointer",
           }}
         >
-          <BsPencilSquare color="#fff" />
+          <BsPencilSquare />
           <span>Change Model</span>
         </button>
       </div>
@@ -93,7 +93,7 @@ export default function SelectPhoneStorage({
             cursor: "pointer",
           }}
         >
-          <BsPencilSquare color="#fff" />
+          <BsPencilSquare />
           <span>change carrier</span>
         </button>
       </div>

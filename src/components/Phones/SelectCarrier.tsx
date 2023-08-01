@@ -10,7 +10,32 @@ export default function SelectCarrier({
   setCarrier: React.Dispatch<React.SetStateAction<string>>;
 }) {
   const carriers = useMemo(
-    () => ["AT&T", "T-Mobile", "Verizon", "Unlocked", "Other"],
+    () => [
+      {
+        title: "AT&T",
+        img: "ata.png",
+      },
+      {
+        title: "T-Mobile",
+        img: "tmobile.png",
+      },
+      {
+        title: "Sprint",
+        img: "sprint.png",
+      },
+      {
+        title: "Verizon",
+        img: "verizon.png",
+      },
+      {
+        title: "Unlocked",
+        img: "locked.png",
+      },
+      {
+        title: "Other",
+        img: "other.png",
+      },
+    ],
     []
   );
 
@@ -47,7 +72,7 @@ export default function SelectCarrier({
               cursor: "pointer",
             }}
           >
-            <BsPencilSquare color="#fff" />
+            <BsPencilSquare />
             <span>Change Model</span>
           </button>
         </div>
@@ -70,6 +95,7 @@ export default function SelectCarrier({
           style={{
             display: "flex",
             gap: "10px",
+            flexWrap: "wrap",
             justifyContent: "center",
           }}
         >
@@ -77,7 +103,7 @@ export default function SelectCarrier({
             return (
               <div
                 onClick={() => {
-                  setCarrier(carrier);
+                  setCarrier(carrier.title);
                 }}
                 style={{
                   cursor: "pointer",
@@ -86,10 +112,10 @@ export default function SelectCarrier({
                 }}
               >
                 <img
-                  src="ata.png"
+                  src={carrier.img}
                   style={{
-                    objectFit: "contain",
                     width: "150px",
+                    height: "80px",
                   }}
                 />
                 <p
@@ -99,7 +125,7 @@ export default function SelectCarrier({
                     textAlign: "center",
                   }}
                 >
-                  {carrier}
+                  {carrier.title}
                 </p>
               </div>
             );

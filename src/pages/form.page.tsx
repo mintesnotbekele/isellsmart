@@ -1,32 +1,20 @@
-import React from "react";
+//@ts-ignore
 import styles from "./form.module.css";
+
+import React, { useRef } from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { FaCheckSquare, FaRegSquare } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function FormPage() {
-  console.log(useLocation());
-  const [formData, setFormData] = useState({
-    name: "",
-    model: "",
-    description: "",
-    fullName: "",
-    email: "",
-    whatsappNumber: "",
-    location: "",
-    meetingDate: "",
-    price: "",
-    modeOfPayment: "Cash",
-    powerOn: "",
-    functional: "",
-    crackFree: "",
-    images: [],
-  });
+  const { state } = useLocation();
+  const fileRef = useRef<HTMLInputElement>(null);
 
-  const [submitSuccess, setSubmitSuccess] = useState("");
-  const [images, setImages] = useState([]);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>();
+  const [images, setImages] = useState<File[]>();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [fullName, setFullName] = useState("");
@@ -39,17 +27,15 @@ function FormPage() {
   const [powerOn, setPowerOn] = useState("");
   const [functional, setFunctional] = useState("");
   const [crackFree, setCrackFree] = useState("");
-  const [model, setModel] = useState("");
 
   const handleImageChange = (e) => {
-    const { files } = e.target;
+    const { files }: { files: File[] } = e.target;
     const selectedImages = Array.from(files);
     setImages(selectedImages);
   };
   const handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
 
-    console.log(name, " value", checked);
     if (name == "powerOn") {
       setPowerOn(checked);
     }
@@ -60,43 +46,49 @@ function FormPage() {
       setCrackFree(checked);
     }
   };
-  const handleNotificationClose = () => {
-    setSubmitSuccess(false);
-  };
 
   const handleSubmit = (e) => {
+    setIsSubmitting(true);
     e.preventDefault();
     // Send formData to endpoint
-    const formDate = new FormData();
-    formDate.append("name", name);
-    formDate.append("description", description);
-    formDate.append("fullName", fullName);
-    formDate.append("email", email);
-    formDate.append("whatsappNumber", whatsappNumber);
-    formDate.append("location", location);
-    formDate.append("meetingDate", meetingDate);
-    formDate.append("price", price);
-    formDate.append("modeOfPayment", modeOfPayment);
-    formDate.append("powerOn", powerOn);
-    formDate.append("crackFree", crackFree);
-    formDate.append("functional", functional);
-    formDate.append("model", model);
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("carrier", state.carrier);
+    formData.append("storage", state.storage);
+    formData.append("model", state.phoneModel);
+    formData.append("description", description);
+    formData.append("fullName", fullName);
+    formData.append("email", email);
+    formData.append("whatsappNumber", whatsappNumber);
+    formData.append("location", location);
+    formData.append("meetingDate", meetingDate);
+    formData.append("price", price);
+    formData.append("modeOfPayment", modeOfPayment);
+    formData.append("powerOn", powerOn);
+    formData.append("crackFree", crackFree);
+    formData.append("functional", functional);
 
-    images.map((image) => {
-      formDate.append("images", image);
+    images?.map((image) => {
+      formData.append("images", image);
     });
-    console.log(" Form Data ", formDate);
+    console.log(" Form Data ", formData);
 
     axios
-      .post("https://i-sell-smart.onrender.com/api/item/create", formDate, {
+      .post("https://i-sell-smart.onrender.com/api/item/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       })
       .then((response) => {
-        console.log(" Response ", response);
-        setSubmitSuccess(true);
+        toast("Successfully submitted!", {
+          type: "success",
+        });
+        if (fileRef?.current) {
+          fileRef.current.value = "";
+        }
+        setIsSubmitting(false);
         setImages([]);
+        setModeOfPayment("");
         setName("");
         setDescription("");
         setFullName("");
@@ -107,7 +99,6 @@ function FormPage() {
         setPowerOn("");
         setCrackFree("");
         setFunctional("");
-        setModel("");
         setPrice("");
       })
       .catch((error) => {
@@ -138,7 +129,7 @@ function FormPage() {
         </motion.h2>
         <br></br>
       </div>
-      <div style={{ opacity: 1 }}>
+      <div style={{ opacity: 1, marginBottom: "70px" }}>
         <motion.h6
           initial={{ opacity: 0 }}
           transition={{
@@ -153,26 +144,6 @@ function FormPage() {
         >
           Fill up all the details and complete the process
         </motion.h6>
-      </div>
-      <div className={styles.form_container}>
-        <div
-          style={{
-            opacity: 1,
-          }}
-        >
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{
-              delay: 1.8,
-              duration: 1.5,
-            }}
-            viewport={{
-              once: true,
-            }}
-            whileInView={{ opacity: 1 }}
-            className={styles.form_wrapper}
-          ></motion.div>
-        </div>
       </div>
 
       <div className={styles.contain}>
@@ -234,15 +205,6 @@ function FormPage() {
             />
           </label>
           <label>
-            Model
-            <input
-              type="text"
-              name="model"
-              value={model}
-              onChange={(e) => setModel(e.target.value)}
-            />
-          </label>
-          <label>
             Description
             <textarea
               name="description"
@@ -269,7 +231,7 @@ function FormPage() {
             <input
               type="checkbox"
               name="powerOn"
-              checked={powerOn}
+              checked={Boolean(powerOn)}
               onChange={handleCheckboxChange}
               style={{ display: "none" }}
             />
@@ -288,7 +250,7 @@ function FormPage() {
             <input
               type="checkbox"
               name="functional"
-              checked={functional}
+              checked={Boolean(functional)}
               onChange={handleCheckboxChange}
               style={{ display: "none" }}
             />
@@ -306,7 +268,7 @@ function FormPage() {
             <input
               type="checkbox"
               name="crackFree"
-              checked={crackFree}
+              checked={Boolean(crackFree)}
               onChange={handleCheckboxChange}
               style={{ display: "none" }}
             />
@@ -339,6 +301,7 @@ function FormPage() {
           <label>
             Images (Max 5)
             <input
+              ref={fileRef}
               type="file"
               name="images"
               onChange={handleImageChange}
@@ -346,13 +309,22 @@ function FormPage() {
               required
             />
           </label>
-          <div>
-            {images.map((image, index) => (
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+            }}
+          >
+            {images?.map((image, index) => (
               <img
                 key={index}
                 src={URL.createObjectURL(image)}
                 alt={`Image ${index}`}
                 width="200"
+                style={{
+                  objectFit: "contain",
+                }}
                 height="200"
               />
             ))}
@@ -362,6 +334,7 @@ function FormPage() {
 
       <div className="form-buttons" style={{ textAlign: "right" }}>
         <button
+          disabled={isSubmitting}
           type="submit"
           style={{
             backgroundColor: "white",
@@ -375,37 +348,9 @@ function FormPage() {
             transition: "all 0.3s ease-in-out",
           }}
         >
-          Submit
+          {isSubmitting ? "Submitting Please wait..." : "Submit"}
         </button>
       </div>
-      {submitSuccess && (
-        <div
-          style={{
-            marginTop: "10px",
-            backgroundColor: "green",
-            color: "white",
-            padding: "5px",
-            borderRadius: "5px",
-            position: "fixed",
-            top: "10px",
-          }}
-        >
-          Your form has been submitted successfully!
-          <button
-            onClick={handleNotificationClose}
-            style={{
-              marginLeft: "10px",
-              backgroundColor: "white",
-              color: "green",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            X
-          </button>
-        </div>
-      )}
     </form>
   );
 }
