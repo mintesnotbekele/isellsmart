@@ -22,7 +22,7 @@ function ThridCard() {
         </p>
       </div>
       <div className={styles.right}>
-        <Image path={transferRisk} style={{ width: "30%", top: "-10vh" }} />
+        <Image path={transferRisk} style={{ width: "20%", top: "0vh" }} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./fourth.module.css";
 import { motion } from "framer-motion";
-import audienceGroup from "../../assets/images/audienceGroup.14dd897c.png";
+import audienceGroup from "../../assets/images/transferRisk.982140b4.png";
 function Fourth() {
   return (
     <div className={styles.container}>
@@ -34,9 +34,9 @@ function Fourth() {
             viewport={{ once: true }}
             className={styles.p}
           >
-            
-       We understand that upgrading to the latest Phone is an exciting experience, and we're here to make the process of selling  your old iPhone simple and rewarding.
-            
+            We understand that upgrading to the latest Phone is an exciting
+            experience, and we're here to make the process of selling your old
+            iPhone simple and rewarding.
           </motion.p>
         </div>
         <div className={styles.content}>
@@ -87,28 +87,6 @@ function Fourth() {
                 src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27680%27%20height=%27256%27/%3e"
               ></img>
             </span>
-            <img
-              src={audienceGroup}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0,
-                boxSizing: "border-box",
-                padding: 0,
-                border: "none",
-                margin: "auto",
-                display: "block",
-                width: 0,
-                height: 0,
-                minWidth: "100%",
-                maxWidth: "100%",
-                minHeight: "100%",
-                maxHeight: "100%",
-              }}
-              alt=""
-            />
           </span>
         </div>
       </div>

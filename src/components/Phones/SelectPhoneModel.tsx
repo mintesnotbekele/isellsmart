@@ -153,10 +153,11 @@ export default function SelectPhoneModel({
                 borderRadius: "20px",
                 overflow: "hidden",
                 display: "flex",
+                width: "8%",
                 flexDirection: "column",
               }}
             >
-              <img src="iphone.jpeg" />
+              <img src="ipse.png" />
               <p
                 style={{
                   fontSize: "20px",
