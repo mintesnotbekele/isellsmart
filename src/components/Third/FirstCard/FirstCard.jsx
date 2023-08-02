@@ -13,7 +13,7 @@ function FirstCard({ title, subtitle }) {
             fontWeight: "bold",
           }}
         >
-Select Your Iphone Model
+          Select Your Iphone Model
         </h3>
         <br></br>
         <p
@@ -27,7 +27,7 @@ Select Your Iphone Model
         </p>
       </div>
       <div className={styles.bottom_first_right}>
-        <Image path={FeeGouging} />
+        <Image path={FeeGouging} style={{ width: "50%" }} />
       </div>
     </div>
   );
