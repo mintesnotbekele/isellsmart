@@ -96,7 +96,7 @@ function Header() {
                   marginBottom: "2.5rem",
                 }}
               >
-                <img src={AUP} alt="" className={styles.minilogo} />
+                <img src={"1.png"} alt="" className={styles.minilogo} />
                 <button
                   onClick={() => setShow(false)}
                   style={{

@@ -1,6 +1,39 @@
+//@ts-nocheck
+import styles from "./selectcarrier.module.css";
+
 import React, { useMemo } from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+
+let imgKey = {
+  "iPhone 14 Pro Max": "14promax.jpeg",
+  "iPhone 14 Pro": "14pro.jpeg",
+  "iPhone 13 Pro Max": "13promax.jpeg",
+  "iPhone 14 Plus": "14plus.jpeg",
+  "iPhone 14": "14.jpeg",
+  "iPhone 13 Pro": "13pro.jpeg",
+  "iPhone 13": "13.jpeg",
+  "iPhone 12 Pro Max": "12promax.jpeg",
+  "iPhone 12 Pro": "12pro.jpeg",
+  "iPhone 12": "12.jpeg",
+  "iPhone 12 Mini": "12mini.jpeg",
+  "iPhone 11 Pro Max": "11promax.jpeg",
+  "iPhone 11 Pro": "11pro.jpeg",
+  "iPhone 11": "11.jpeg",
+  "iPhone XS Max": "xsmax.jpeg",
+  "iPhone XS": "xs.jpeg",
+  "iPhone XR": "xr.jpeg",
+  "iPhone X": "x.jpeg",
+  "iPhone 8 Plus": "8plus.jpeg",
+  "iPhone 8": "8.jpeg",
+  "iPhone 7 Plus": "7plus.jpeg",
+  "iPhone 7": "7.jpeg",
+  "iPhone 6s Plus": "6splus.jpeg",
+  "iPhone 6s": "6s.jpeg",
+  "iPhone 6": "6.jpeg",
+  "iPhone SE 3rd Gen": "se3rdgen.jpeg",
+  "iPhone SE 2nd Gen": "se2ndgen.jpeg",
+};
 export default function SelectPhoneStorage({
   setPhoneModel,
   setCarrier,
@@ -24,6 +57,7 @@ export default function SelectPhoneStorage({
   );
   return (
     <div
+      className={styles.contanier}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -107,6 +141,7 @@ export default function SelectPhoneStorage({
           display: "flex",
           gap: "10px",
           justifyContent: "center",
+          flexWrap: "wrap",
           marginBottom: "50px",
         }}
       >
@@ -122,10 +157,11 @@ export default function SelectPhoneStorage({
               }}
             >
               <img
-                src="iphone.jpeg"
+                src={"iphone/" + imgKey[phoneModel]}
                 style={{
                   objectFit: "contain",
-                  width: "300px",
+                  width: "20vw",
+                  maxWidth: "200px",
                 }}
               />
               <p
@@ -152,7 +188,9 @@ export default function SelectPhoneStorage({
                   cursor: "pointer",
                   backgroundColor: "#fff",
                   fontSize: "1.2rem",
-                  padding: "10px 20px",
+                  border: "none",
+                  padding: "1vw 1.2vw",
+                  borderRadius: "10px",
                 }}
               >
                 Get Offer

@@ -1,3 +1,6 @@
+//@ts-nocheck
+import styles from "./selectcarrier.module.css";
+
 import React, { useMemo } from "react";
 import { BsPencilSquare } from "react-icons/bs";
 export default function SelectCarrier({
@@ -40,7 +43,7 @@ export default function SelectCarrier({
   );
 
   return (
-    <div>
+    <div className={styles.contanier}>
       <div
         style={{
           display: "flex",

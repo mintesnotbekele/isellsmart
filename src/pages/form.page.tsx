@@ -6,10 +6,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { FaCheckSquare, FaRegSquare } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function FormPage() {
+  const navigate = useNavigate();
   const { state } = useLocation();
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -100,6 +101,7 @@ function FormPage() {
         setCrackFree("");
         setFunctional("");
         setPrice("");
+        navigate("/");
       })
       .catch((error) => {
         console.log(" Error ", error);
