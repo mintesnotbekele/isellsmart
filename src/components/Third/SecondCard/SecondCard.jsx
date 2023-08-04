@@ -7,19 +7,13 @@ function SecondCard() {
     <div className={styles.container}>
       <div className={styles.left}>
         <h3 className={styles.left_header}>Fill out all the details</h3>
-        <p
-          className={styles.left_p}
-          style={{
-            marginTop: "1.5rem",
-            maxWidth: "450px",
-          }}
-        >
+        <p className={styles.left_p}>
           <br></br>
           Fill out all the details including your personal info
         </p>
       </div>
       <div className={styles.right}>
-        <Image path={snubbedArtists} />
+        <img src={snubbedArtists} />
       </div>
     </div>
   );

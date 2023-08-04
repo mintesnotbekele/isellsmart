@@ -25,7 +25,9 @@ function Sixth() {
           }}
           className={styles.header}
         >
-          Competitive Pricing Fast & Secure Payments Hassle free Process
+Competitive Pricing
+Fast & Secure Payments
+          Hassle free Process
         </motion.h2>
       </div>
       <div className={styles.wrapper}>

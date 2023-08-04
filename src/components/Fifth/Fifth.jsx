@@ -34,7 +34,8 @@ function Fifth() {
               viewport={{ once: true }}
               className={styles.header}
             >
-              All the reasons to trade in with iCellSmart. Including one very big.
+              All the reasons to trade in with iCellSmart. Including one very
+              big.
               <br />
               <span>You'll never miss a work with iCellSmart</span>
               <h5>Trust & Transparency</h5>
@@ -99,10 +100,10 @@ function Fifth() {
           <img
             src={laptopFold}
             style={{
-              width: "67%",
+              width: "37%",
+              marginBottom: "40px",
               objectFit: "contain",
               maxWidth: 1000,
-              height: 680,
               backgroundSize: "100%",
             }}
             alt=""

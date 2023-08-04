@@ -9,11 +9,12 @@ function FourthCard() {
         <h3 className={styles.left_header}>Get Paid Instantly</h3>
         <br></br>
         <p className={styles.left_p}>
-Get paid for your Iphone using any Modes of Payment available in our website
+          Get paid for your Iphone using any Modes of Payment available in our
+          website
         </p>
       </div>
       <div className={styles.right}>
-        <Image path={weakEventNavigation} />
+        <img src={weakEventNavigation} />
       </div>
     </div>
   );

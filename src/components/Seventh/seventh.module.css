@@ -69,20 +69,13 @@
 @media (max-width) {
 }
 
-.second {
-  max-width: 1440px;
-  -webkit-align-self: baseline;
-  -ms-flex-item-align: baseline;
-  align-self: baseline;
-}
-
 .header {
   margin: 0;
   font-size: 4.875rem;
   line-height: 1;
   font-family: Aeonik, Helvetica Neue, sans-serif;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 500;
+  position: relative;
   padding-bottom: 32px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -92,7 +85,7 @@
   -ms-flex-item-align: flex-start;
   align-self: flex-start;
   max-width: 1100px;
-  background: linear-gradient(279.17deg, #b0ade9 32.06%, #d7f3f6 96.86%);
+  background: linear-gradient(279.17deg, #0a01c0 32.06%, #14c3d7 96.86%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

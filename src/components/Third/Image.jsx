@@ -1,6 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-function Image({ path, style = {} }) {
+function Image({ path }) {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(max-width: 900px)",
   });
@@ -26,7 +26,6 @@ function Image({ path, style = {} }) {
           height: 220,
           right: -10,
         }),
-        ...style,
       }}
       alt=""
     />
