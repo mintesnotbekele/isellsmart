@@ -15,7 +15,6 @@ function Fifth() {
         style={{
           width: "100%",
           maxWidth: "max(1600px, 90%)",
-          marginLeft: "auto",
         }}
       >
         <div className={styles.top_container}>
@@ -41,6 +40,21 @@ function Fifth() {
               <h5>Trust & Transparency</h5>
               <h5>Trade in Price - Promise</h5>
             </motion.h2>
+            <ul
+              style={{
+                listStyleType: "circle",
+                fontSize: "1.6rem",
+                padding: "0 0 127px 88px",
+              }}
+            >
+              <li>We're Mobile, cash on-the-go </li>
+              <li>Fast & Reliable ⚡️</li>
+              <li>
+                Time/Location/Schedules at your Conenience We’ll work on your
+                schedule
+              </li>
+              <li>Its super easy, Get a Click Quote Now</li>
+            </ul>
           </div>
         </div>
         <div className={styles.bottom_container}>
@@ -49,8 +63,6 @@ function Fifth() {
               style={{
                 height: 200,
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
               }}
               spaceBetween={30}
               centeredSlides={true}
@@ -103,7 +115,7 @@ function Fifth() {
               width: "37%",
               marginBottom: "40px",
               objectFit: "contain",
-              maxWidth: 1000,
+              maxWidth: 400,
               backgroundSize: "100%",
             }}
             alt=""

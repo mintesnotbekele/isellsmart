@@ -17,15 +17,14 @@ function Second() {
       <div className={styles.second}>
         <div className={styles.second_left_half}>
           <h2 className={styles.second_left_half_header}>
-                Trade in. Upgrade. Save. 
+            Trade in. Upgrade. Save.
             <h2 className={styles.second_left_half_header}>
               It’s a win-win with iCellSmart
-
             </h2>
           </h2>
           <button className={styles.button}>
             <a className={styles.button_anchor} href="#request-demo">
-              Request Demo
+              Sell Your Phone
             </a>
           </button>
         </div>

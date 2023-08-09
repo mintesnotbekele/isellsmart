@@ -1,17 +1,9 @@
 .main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto;
-}
-@media (min-width: 1440px) {
-  .main {
-    gap: 5rem;
-  }
 }
 .first {
   position: absolute;
