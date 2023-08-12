@@ -44,16 +44,16 @@ function Fifth() {
               style={{
                 listStyleType: "circle",
                 fontSize: "1.6rem",
-                padding: "0 0 127px 88px",
+                padding: "0 0 12px 8px",
               }}
             >
-              <li>We're Mobile, cash on-the-go </li>
-              <li>Fast & Reliable ⚡️</li>
-              <li>
+              <h4 className={styles.bullets}>We're Mobile, cash on-the-go </h4>
+              <h4 className={styles.bullets}>Fast & Reliable ⚡️</h4>
+              <h4   className={styles.bullets}>Its super easy, Get a Click Quote Now</h4>
+              <h4 className={styles.bullets}>
                 Time/Location/Schedules at your Conenience We’ll work on your
                 schedule
-              </li>
-              <li>Its super easy, Get a Click Quote Now</li>
+              </h4>
             </ul>
           </div>
         </div>

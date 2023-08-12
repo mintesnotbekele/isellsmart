@@ -40,7 +40,20 @@
   font-family: Aeonik, Helvetica Neue, sans-serif;
   font-weight: 300;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  font-style: normal;
+  line-height: 100%;
+  max-width: 890px;
+}
+.bullets {
+  margin: 0;
+  line-height: 1;
+  font-size: 2rem;
+  padding: 30px 10px;
+  font-family: Aeonik, Helvetica Neue, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-align: left;
   font-style: normal;
   line-height: 100%;
   max-width: 890px;
@@ -61,6 +74,27 @@
 @media (max-width: 600px) {
   .header {
     font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 1200px) {
+.bullets {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .bullets {
+    font-size: 3rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bullets {
+    font-size: 1.875rem;
+    text-align: center;
+    padding: 10px;
   }
 }
 
