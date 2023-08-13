@@ -32,6 +32,7 @@ function Fifth() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className={styles.header}
+              style={{textAlign: 'center', margin: 'auto', paddingTop: '100px'}}
             >
               All the reasons to trade in with iCellSmart. Including one very
               big.
@@ -47,13 +48,27 @@ function Fifth() {
                 padding: "0 0 12px 8px",
               }}
             >
-              <h4 className={styles.bullets}>We're Mobile, cash on-the-go </h4>
-              <h4 className={styles.bullets}>Fast & Reliable ⚡️</h4>
-              <h4   className={styles.bullets}>Its super easy, Get a Click Quote Now</h4>
-              <h4 className={styles.bullets}>
+               <motion.h2
+              initial={{ opacity: 0 }}
+              transition={{
+                delay: 0.2,
+                duration: 1,
+              }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className={styles.bullets}
+              style={{margin: 'auto'}}
+
+            >
+              <h5 className={styles.bullets}>We're Mobile, cash on-the-go </h5>
+              <h5 className={styles.bullets}>Fast & Reliable ⚡️</h5>
+              <h5   className={styles.bullets}>Its super easy, Get a Click Quote Now</h5>
+              <br/>
+              <h5 className={styles.bullets} >
                 Time/Location/Schedules at your Conenience We’ll work on your
                 schedule
-              </h4>
+              </h5>
+              </motion.h2>
             </ul>
           </div>
         </div>

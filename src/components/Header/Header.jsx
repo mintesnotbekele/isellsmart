@@ -15,7 +15,7 @@ function Header() {
     },
     {
       title: "Prepare your iphone",
-      link: "organizers",
+      link: "request-demo",
     },
     {
       title: "FAQ",
