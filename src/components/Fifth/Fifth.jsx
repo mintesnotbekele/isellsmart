@@ -37,9 +37,13 @@ function Fifth() {
               All the reasons to trade in with iCellSmart. Including one very
               big.
               <br />
-              <span>You'll never miss a work with iCellSmart</span>
-              <h5>Trust & Transparency</h5>
-              <h5>Trade in Price - Promise</h5>
+              <span >You'll never miss a work with iCellSmart</span>
+              <br/>
+              <br/>
+              <h5 style={{margin: '0px'}}>Trust & Transparency</h5>
+              <br/>
+              <h5 style={{margin: '0px'}}>Trade in Price - Promise</h5>
+              <br/>
             </motion.h2>
                <motion.h2
               initial={{ opacity: 0 }}
