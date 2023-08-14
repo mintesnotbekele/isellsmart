@@ -158,7 +158,7 @@ export default function SelectPhoneModel({
           textAlign: "center",
         }}
       >
-        Which Model Dou You Have ?
+        Which Model Do You Have ?
       </h6>
       <div
         style={{

@@ -41,13 +41,6 @@ function Fifth() {
               <h5>Trust & Transparency</h5>
               <h5>Trade in Price - Promise</h5>
             </motion.h2>
-            <ul
-              style={{
-                listStyleType: "circle",
-                fontSize: "1.6rem",
-                padding: "0 0 12px 8px",
-              }}
-            >
                <motion.h2
               initial={{ opacity: 0 }}
               transition={{
@@ -69,7 +62,7 @@ function Fifth() {
                 schedule
               </h5>
               </motion.h2>
-            </ul>
+            
           </div>
         </div>
         <div className={styles.bottom_container}>
