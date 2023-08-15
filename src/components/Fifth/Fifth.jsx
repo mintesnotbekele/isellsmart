@@ -40,6 +40,8 @@ function Fifth() {
               <span >You'll never miss a work with iCellSmart</span>
               <br/>
               <br/>
+              <h5 className={styles.bullets}>Fast & Reliable</h5>
+              <br/>
               <h5 style={{margin: '0px'}}>Trust & Transparency</h5>
               <br/>
               <h5 style={{margin: '0px'}}>Trade in Price - Promise</h5>
@@ -58,7 +60,7 @@ function Fifth() {
 
             >
               <h5 className={styles.bullets}>We're Mobile, cash on-the-go </h5>
-              <h5 className={styles.bullets}>Fast & Reliable</h5>
+              <br/>
               <h5   className={styles.bullets}>Its super easy, Get a Click Quote Now</h5>
               <br/>
               <h5 className={styles.bullets} >
