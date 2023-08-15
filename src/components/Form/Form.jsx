@@ -128,8 +128,8 @@ function Form() {
           whileInView={{ opacity: 1 }}
           className={styles.header}
         >
-           <img src={"1.png"} alt="" className={styles.minilogo} />
-          selling your iphone now
+          
+          Start selling your iphone now
         </motion.h2>
         <br></br>
       </div>

@@ -71,6 +71,7 @@ export default function SelectCarrier({
           </p>
           <button
             onClick={() => setPhoneModel("")}
+            className={styles.button}
             style={{
               cursor: "pointer",
             }}

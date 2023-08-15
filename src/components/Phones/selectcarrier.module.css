@@ -6,3 +6,52 @@
     margin-top: 50vw;
   }
 }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  color: #556cd6;
+  min-width: 64px;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+  color: #000;
+  text-transform: none;
+  padding: 1rem 2.9rem;
+  font-weight: bold;
+  margin-right: auto;
+  margin-top: 2rem;
+  /* margin: 2.5rem auto; */
+}
+.button::-moz-focus-inner {
+  border-style: none;
+}
+.button.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+@media print {
+  .button {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
