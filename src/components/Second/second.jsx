@@ -24,7 +24,7 @@ function Second() {
           </h2>
           <button className={styles.button}>
             <a className={styles.button_anchor} href="#request-demo">
-              Sell Your Phone
+              Sell Your IPhone
             </a>
           </button>
         </div>

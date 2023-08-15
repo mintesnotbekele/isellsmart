@@ -309,7 +309,7 @@
   font-family: Aeonik, Helvetica Neue, sans-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 27px;
+  font-size: 37px;
   text-align: center;
 }
 
@@ -329,6 +329,7 @@
 .fifth_slide_p span {
   font-weight: bold;
   color: #68c6f5;
+  font-size: 41px;
 }
 
 @media (max-width: 900px) {

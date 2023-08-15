@@ -30,6 +30,21 @@
   width:40%;
 
 }
+
+.logo {
+  margin-left: 0.5rem;
+  width: 140px;
+  object-fit: contain;
+}
+
+@media (max-width: 964px) {
+  .logo {
+    margin-left: 0;
+    width: 120px;
+    height: auto;
+  }
+}
+
 .contain2 {
   margin: 10px;
   width:40%;

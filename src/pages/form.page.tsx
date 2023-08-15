@@ -114,7 +114,10 @@ function FormPage() {
       id="request-demo"
       style={{ backgroundColor: "black", width: "80%", margin: "0 auto" }}
     >
-      <div style={{ opacity: 1 }}>
+      <div className="flex justify-evenly mx-auto">
+      <img src={"1.png"} alt="" className={styles.minilogo} />
+      <div style={{ opacity: 1 ,marginTop: '-63px', display: 'flex', justifyContent: 'center'}}>
+     
         <motion.h2
           initial={{ opacity: 0 }}
           transition={{
@@ -127,9 +130,11 @@ function FormPage() {
           whileInView={{ opacity: 1 }}
           className={styles.header}
         >
+          
           Start selling your iphone now
         </motion.h2>
         <br></br>
+      </div>
       </div>
       <div style={{ opacity: 1, marginBottom: "70px" }}>
         <motion.h6

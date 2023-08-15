@@ -64,7 +64,7 @@ function Fifth() {
               <h5   className={styles.bullets}>Its super easy, Get a Click Quote Now</h5>
               <br/>
               <h5 className={styles.bullets} >
-                Time/Location/Schedules at your Conenience 
+                Time/Location/Schedules at your Convenience
               </h5>
               </motion.h2>
             

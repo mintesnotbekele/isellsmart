@@ -115,6 +115,7 @@ function Form() {
   return (
     <form  onSubmit={handleSubmit} id="request-demo" style={{ backgroundColor: "black", width: "80%", margin: "0 auto" }}>
       <div style={{ opacity: 1 }}>
+
         <motion.h2
           initial={{ opacity: 0 }}
           transition={{
@@ -127,7 +128,8 @@ function Form() {
           whileInView={{ opacity: 1 }}
           className={styles.header}
         >
-          Start selling your iphone now
+           <img src={"1.png"} alt="" className={styles.minilogo} />
+          selling your iphone now
         </motion.h2>
         <br></br>
       </div>

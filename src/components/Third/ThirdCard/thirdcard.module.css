@@ -26,18 +26,17 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  flex-basis: 100%;
   flex-grow: 1.5;
   text-align: center;
   padding: 0 10px;
 }
 .left_header {
   margin: 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .left_p {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .right {
   display: flex;
