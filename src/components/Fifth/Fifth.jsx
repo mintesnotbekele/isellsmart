@@ -58,7 +58,7 @@ function Fifth() {
 
             >
               <h5 className={styles.bullets}>We're Mobile, cash on-the-go </h5>
-              <h5 className={styles.bullets}>Fast & Reliable ⚡️</h5>
+              <h5 className={styles.bullets}>Fast & Reliable</h5>
               <h5   className={styles.bullets}>Its super easy, Get a Click Quote Now</h5>
               <br/>
               <h5 className={styles.bullets} >
