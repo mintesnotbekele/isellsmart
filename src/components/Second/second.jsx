@@ -22,7 +22,7 @@ function Second() {
               It’s a win-win with iCellSmart
             </h2>
           </h2>
-          <button className={styles.button}>
+          <button className={styles.button}> 
             <a className={styles.button_anchor} href="#request-demo">
               Sell Your IPhone
             </a>
