@@ -159,3 +159,32 @@
 .link:hover {
   text-decoration-color: inherit;
 }
+/* Add styles to the ticker container */
+.ticker {
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Add styles to the ticker content */
+.ticker h1 {
+  display: inline-block;
+  animation: tickerAnimation 10s linear infinite;
+  /* background-color: orange; */
+}
+
+/* Define the animation for the ticker */
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.content {
+  font-size: 24px;
+}
