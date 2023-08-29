@@ -95,9 +95,10 @@ function Fifth() {
             >
               <SwiperSlide className={styles.slide_item}>
                 <p className={styles.fifth_slide_p}>
-                  <span>Sell Your Iphone.</span>
+                  <span>Join our Partnership.</span>
                   <br></br>
-                  Hand in your old phone Get cash in hand. It’s really that easy
+                  Refer friends and family and receive up to $25 per device
+                  trade in.
                 </p>
               </SwiperSlide>
               <SwiperSlide className={styles.slide_item}>
