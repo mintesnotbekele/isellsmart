@@ -6,11 +6,11 @@ function FourthCard() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h3 className={styles.left_header}>Get Paid Instantly</h3>
+        <h3 className={styles.left_header}>FAST AND RLIABLE</h3>
         <br></br>
         <p className={styles.left_p}>
-          Get paid for your Iphone using any Modes of Payment available in our
-          website
+          Need it gone asap? Shoot our team a text and well make it dissapear,
+          same day if possible.
         </p>
       </div>
       <div className={styles.right}>

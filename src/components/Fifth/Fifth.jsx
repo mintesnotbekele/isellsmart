@@ -32,22 +32,24 @@ function Fifth() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className={styles.header}
-              style={{textAlign: 'center', margin: 'auto', paddingTop: '100px'}}
+              style={{
+                textAlign: "center",
+                margin: "auto",
+                paddingTop: "100px",
+              }}
             >
-              All the reasons to trade in with iCellSmart. Including one very
-              big.
               <br />
-              <span >You'll never miss a work with iCellSmart</span>
-              <br/>
-              <br/>
+              <span>You'll never miss a work with iCellSmart</span>
+              <br />
+              <br />
               <h5 className={styles.bullets}>Fast & Reliable</h5>
-              <br/>
-              <h5 style={{margin: '0px'}}>Trust & Transparency</h5>
-              <br/>
-              <h5 style={{margin: '0px'}}>Trade in Price - Promise</h5>
-              <br/>
+              <br />
+              <h5 style={{ margin: "0px" }}>Trust & Transparency</h5>
+              <br />
+              <h5 style={{ margin: "0px" }}>Trade in Price - Promise</h5>
+              <br />
             </motion.h2>
-               <motion.h2
+            <motion.h2
               initial={{ opacity: 0 }}
               transition={{
                 delay: 0.2,
@@ -56,18 +58,18 @@ function Fifth() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className={styles.bullets}
-              style={{margin: 'auto'}}
-
+              style={{ margin: "auto" }}
             >
               <h5 className={styles.bullets}>We're Mobile, cash on-the-go </h5>
-              <br/>
-              <h5   className={styles.bullets}>Its super easy, Get a Click Quote Now</h5>
-              <br/>
-              <h5 className={styles.bullets} >
+              <br />
+              <h5 className={styles.bullets}>
+                Its super easy, Get a Click Quote Now
+              </h5>
+              <br />
+              <h5 className={styles.bullets}>
                 Time/Location/Schedules at your Convenience
               </h5>
-              </motion.h2>
-            
+            </motion.h2>
           </div>
         </div>
         <div className={styles.bottom_container}>

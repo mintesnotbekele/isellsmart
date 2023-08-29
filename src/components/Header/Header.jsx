@@ -48,7 +48,7 @@ function Header() {
             viewport={{
               once: true,
             }}
-            src={"1.png"}
+            src={"logo final.png"}
             className={styles.logo}
             alt=""
           />
@@ -96,7 +96,11 @@ function Header() {
                   marginBottom: "2.5rem",
                 }}
               >
-                <img src={"1.png"} alt="" className={styles.minilogo} />
+                <img
+                  src={"logo final.png"}
+                  alt=""
+                  className={styles.minilogo}
+                />
                 <button
                   onClick={() => setShow(false)}
                   style={{

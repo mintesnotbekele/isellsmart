@@ -1,0 +1,130 @@
+.bottom_first {
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+  max-height: 485px;
+  width: 88%;
+  max-width: 1400px;
+  margin: 5.125rem auto 0;
+  display: flex;
+  background: black
+    linear-gradient(
+      180deg,
+      #ffe2c7 -22.35%,
+      rgba(254, 213, 180, 0.328125) 47.17%,
+      rgba(254, 208, 171, 0) 100%
+    );
+  border-radius: 40px;
+  position: sticky;
+  bottom: 0px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.bottom_first_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1.5;
+  text-align: center;
+  padding: 0 10px;
+}
+.bottom_first_left_header {
+  margin: 0;
+  font-size: 4rem;
+}
+.bottom_first_left_p {
+  margin: 0;
+  font-size: 2rem;
+}
+.bottom_first_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  flex-grow: 1;
+  flex-basis: 60%;
+  position: relative;
+}
+.bottom_first_right img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .bottom_first_left {
+    flex-grow: 1.5;
+    padding: 0 10px;
+  }
+  .bottom_first_left_header {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .bottom_first_left_p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .bottom_first_right {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_first {
+    padding: 15px 0;
+  }
+  .bottom_first_left {
+    flex-grow: 1.5;
+    padding: 0 10px;
+  }
+  .bottom_first_left_header {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .bottom_first_left_p {
+    font-size: 1rem;
+  }
+  .bottom_first_right {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 601px) {
+  .bottom_first {
+    height: 285px;
+    width: 95vw;
+    margin: 2rem 10px;
+    padding: 0;
+  }
+  .bottom_first_left {
+    padding: 0 10px;
+  }
+  .bottom_first_left_header {
+    font-size: 1.5rem;
+  }
+  .bottom_first_left_p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  .bottom_first {
+    flex-direction: column;
+    padding: 50px 0;
+    margin: 30px 30px;
+  }
+  .bottom_first_left_header {
+    font-size: 1.8rem;
+  }
+  .bottom_first_left_p {
+    font-size: 1rem;
+  }
+  .bottom_first_right img {
+    width: 50%;
+    object-fit: contain;
+    height: auto;
+  }
+}

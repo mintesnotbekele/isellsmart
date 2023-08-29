@@ -6,10 +6,11 @@ function SecondCard() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h3 className={styles.left_header}>Fill out all the details</h3>
+        <h3 className={styles.left_header}>MOBILE SERVICE ON THE GO</h3>
         <p className={styles.left_p}>
           <br></br>
-          Fill out all the details including your personal info
+          You’ll never have to go out of your way to ship anything again. We’ll
+          come to you.
         </p>
       </div>
       <div className={styles.right}>

@@ -130,14 +130,14 @@
 
 .logo {
   margin-left: 0.5rem;
-  width: 140px;
+  width: 200px;
   object-fit: contain;
 }
 
 @media (max-width: 964px) {
   .logo {
     margin-left: 0;
-    width: 120px;
+    width: 180px;
     height: auto;
   }
 }

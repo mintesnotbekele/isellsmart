@@ -8,6 +8,7 @@ import Sixth from "../Sixth/Sixth";
 import Third from "../Third/Third";
 import styles from "./main.module.css";
 import Phones from "../Phones/Phones";
+import ServicesArea from "../SERVICE AREAS/ServicesArea";
 function Main() {
   return (
     <div className={styles.main}>
@@ -15,6 +16,7 @@ function Main() {
       <Second />
       <Third />
       <Fourth />
+      <ServicesArea />
       <Fifth />
       <Sixth />
       <Seventh />

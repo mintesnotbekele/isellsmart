@@ -5,13 +5,11 @@ function ThridCard() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h3 className={styles.left_header}>
-          Get your Device Evaluated
-        </h3>
+        <h3 className={styles.left_header}>CASH CREDIT</h3>
         <br></br>
         <p className={styles.left_p}>
-           We also recommend factory resetting your<br/> device  to remove and
-          protect your personal information.
+          Same day cash on hand. Dont wait 4- 6 weeks for credit towards your
+          account
         </p>
       </div>
       <div className={styles.right}>

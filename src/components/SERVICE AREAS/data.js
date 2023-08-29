@@ -1,0 +1,18 @@
+export const services = [
+  "carlsbad",
+  "Encinitas",
+  "Escondido",
+  "Oceanside",
+  "Vista",
+  "San marcos",
+  "Poway",
+  "Santee",
+  "Lakeside",
+  "El cajon city",
+  "La mesa",
+  "Mission valley",
+  "Old town",
+  "Pointloma",
+  "National city",
+  "Chulavista",
+];

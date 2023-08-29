@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./firstcard.module.css";
+import styles from "./fifthcard.module.css";
 import FeeGouging from "../../../assets/images/feeGouging.11513ef5.png";
 import Image from "../Image";
-function FirstCard({ title, subtitle }) {
+function FifthCard({ title, subtitle }) {
   return (
     <div className={styles.bottom_first}>
       <div className={styles.bottom_first_left}>
         <h3 className={styles.bottom_first_left_header}>
-          TRUE VALUE IN SECONDS
+          5 TRUE VALUE IN SECONDS
         </h3>
         <br></br>
         <p className={styles.bottom_first_left_p}>
@@ -23,4 +23,4 @@ function FirstCard({ title, subtitle }) {
   );
 }
 
-export default FirstCard;
+export default FifthCard;

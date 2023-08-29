@@ -17,9 +17,8 @@ function Fourth() {
             viewport={{ once: true }}
             className={styles.p}
           >
-            We understand that upgrading to the latest Phone is an exciting
-            experience, and we're here to make the process of selling your old
-            iPhone simple and rewarding.
+            All the reasons to trade in with iCellSmart. Including one very big.
+            We're Mobile, cash on-the-go
           </motion.p>
         </div>
       </div>

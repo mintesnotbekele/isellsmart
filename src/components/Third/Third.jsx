@@ -6,6 +6,7 @@ import SecondCard from "./SecondCard/SecondCard";
 import styles from "./third.module.css";
 import { motion } from "framer-motion";
 import ThridCard from "./ThirdCard/ThridCard";
+import FifthCard from "./FifthCard/FifthCard";
 function Third() {
   const isMobile = useMediaQuery({
     maxWidth: 600,
@@ -25,14 +26,14 @@ function Third() {
             className={styles.top_header}
           >
             <span className={styles.top_header_span}>
-          Power the smartphone and mobile device.
+              We understand that upgrading to the latest iphone model is an
+              exciting experience.
             </span>
-            <br>
-              </br>
-            <br>
-            </br>
-          <span className={styles.top_header}>
-              Recommerce revolution with our technology at iCellSmart
+            <br></br>
+            <br></br>
+            <span className={styles.top_header}>
+              We’re here to make the process of selling your old phone simple
+              and rewarding.
             </span>
           </motion.h2>
         </div>
@@ -40,6 +41,7 @@ function Third() {
       <div className={styles.bottom_container}>
         <div className={styles.bottom_container_wrapper}>
           {isMobile && <FourthCard />}
+          {/* <FifthCard /> */}
           <FirstCard />
           <SecondCard />
           <ThridCard />

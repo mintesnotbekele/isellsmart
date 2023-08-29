@@ -32,7 +32,7 @@
     width: 100%;
   }
 }
-.gaps{ 
+.gaps {
   margin: 0px;
 }
 .header {
@@ -81,7 +81,7 @@
 }
 
 @media (max-width: 1200px) {
-.bullets {
+  .bullets {
     font-size: 4rem;
   }
 }
@@ -490,5 +490,30 @@
   .bottom_wrapper .swiper-button-prev,
   .bottom_wrapper .swiper-button-next {
     display: none;
+  }
+}
+
+.AllReasonsHeader {
+  font-size: 36px;
+  letter-spacing: 0.1rem;
+  line-height: 38px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #adabab 20%, #bdbbee 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.AllReasonsContent {
+  margin-top: -15px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  .AllReasonsContent {
+    margin-top: -30px;
+    font-size: 30px;
+    font-weight: 500;
   }
 }
