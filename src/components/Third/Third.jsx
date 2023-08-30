@@ -7,6 +7,9 @@ import styles from "./third.module.css";
 import { motion } from "framer-motion";
 import ThridCard from "./ThirdCard/ThridCard";
 import FifthCard from "./FifthCard/FifthCard";
+import SixthCard from "./SixthCard/SixthCard";
+import SeventhCard from "./SeventhCard/SeventhCard";
+import EighthCard from "./EighthCard/EighthCard";
 function Third() {
   const isMobile = useMediaQuery({
     maxWidth: 600,
@@ -40,14 +43,15 @@ function Third() {
       </div>
       <div className={styles.bottom_container}>
         <div className={styles.bottom_container_wrapper}>
-          {isMobile && <FifthCard />}
+          {isMobile && <FourthCard />}
           <FirstCard />
           <SecondCard />
           <ThridCard />
           <FourthCard />
-          {/* <FifthCard /> */}
-          <div></div>
-          <div></div>
+          <FifthCard />
+          <SixthCard />
+          <SeventhCard />
+          <EighthCard />
         </div>
       </div>
     </div>
