@@ -62,16 +62,6 @@
   margin-right: 1.5rem;
 }
 
-.link {
-  line-height: 1;
-  font-family: Aeonik, Helvetica Neue, sans-serif;
-  font-weight: 400;
-  box-sizing: inherit;
-  margin: 0;
-  color: #fff;
-  font-size: 1.125rem;
-  text-decoration: none;
-}
 .link_button {
   display: inline-flex;
   -webkit-box-align: center;
@@ -143,21 +133,17 @@
 }
 
 .link {
-  font-size: 46px;
-  margin: 24px 0px;
-  color: #556cd6;
+  font-size: 20px;
+  margin: 15px 0px;
   text-decoration: none;
   -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: rgba(85, 108, 214, 0.4);
   color: #fff;
-  font-size: 1.125rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .link:hover {
-  text-decoration-color: inherit;
+  text-decoration: underline;
 }
 /* Add styles to the ticker container */
 .ticker {
