@@ -168,14 +168,11 @@
   width: 100%;
 }
 
-/* Add styles to the ticker content */
 .ticker h1 {
   display: inline-block;
   animation: tickerAnimation 15s linear infinite;
-  /* background-color: orange; */
 }
 
-/* Define the animation for the ticker */
 @keyframes tickerAnimation {
   0% {
     transform: translateX(100%);
