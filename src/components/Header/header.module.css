@@ -171,7 +171,7 @@
 /* Add styles to the ticker content */
 .ticker h1 {
   display: inline-block;
-  animation: tickerAnimation 10s linear infinite;
+  animation: tickerAnimation 15s linear infinite;
   /* background-color: orange; */
 }
 
