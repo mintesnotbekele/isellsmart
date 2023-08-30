@@ -29,6 +29,16 @@ function FormPage() {
   const [functional, setFunctional] = useState("");
   const [crackFree, setCrackFree] = useState("");
 
+  // da
+  const [turnOnAndFunctionNormaly, setTurnOnAndFunctionNormaly] = useState("");
+  const [alltheButtonWork, setAllTheButtonWork] = useState("");
+  const [camerasWork, setCamerasWork] = useState("");
+  const [batteryHoldsCharge, setBatteryHoldsCharge] = useState("");
+  const [bodyFreeOfDents, setBodyFreeOfDents] = useState("");
+  const [screenAndBackGlassUndamaged, setScreenAndBackGlassUndamaged] =
+    useState("");
+  const [displayFreeOfDistortion, setDisplayFreeOfDistortion] = useState("");
+  // da
   const handleImageChange = (e) => {
     const { files }: { files: File[] } = e.target;
     const selectedImages = Array.from(files);
@@ -46,6 +56,30 @@ function FormPage() {
     if (name == "crackFree") {
       setCrackFree(checked);
     }
+
+    // da
+    if (name == "turnOnAndFunctionNormaly") {
+      setTurnOnAndFunctionNormaly(checked);
+    }
+    if (name == "alltheButtonWork") {
+      setAllTheButtonWork(checked);
+    }
+    if (name == "camerasWork") {
+      setCamerasWork(checked);
+    }
+    if (name == "batteryHoldsCharge") {
+      setBatteryHoldsCharge(checked);
+    }
+    if (name == "bodyFreeOfDents") {
+      setBodyFreeOfDents(checked);
+    }
+    if (name == "screenAndBackGlassUndamaged") {
+      setScreenAndBackGlassUndamaged(checked);
+    }
+    if (name == "displayFreeOfDistortion") {
+      setDisplayFreeOfDistortion(checked);
+    }
+    // da
   };
 
   const handleSubmit = (e) => {
@@ -53,6 +87,7 @@ function FormPage() {
     e.preventDefault();
     // Send formData to endpoint
     const formData = new FormData();
+
     formData.append("name", name);
     formData.append("carrier", state.carrier);
     formData.append("storage", state.storage);
@@ -68,7 +103,15 @@ function FormPage() {
     formData.append("powerOn", powerOn);
     formData.append("crackFree", crackFree);
     formData.append("functional", functional);
-
+    // da
+    formData.append("turnOnAndFunctionNormaly", turnOnAndFunctionNormaly);
+    formData.append("alltheButtonWork", alltheButtonWork);
+    formData.append("camerasWork", camerasWork);
+    formData.append("batteryHoldsCharge", batteryHoldsCharge);
+    formData.append("bodyFreeOfDents", bodyFreeOfDents);
+    formData.append("screenAndBackGlassUndamaged", screenAndBackGlassUndamaged);
+    formData.append("displayFreeOfDistortion", displayFreeOfDistortion);
+    // da
     images?.map((image) => {
       formData.append("images", image);
     });
@@ -101,6 +144,17 @@ function FormPage() {
         setCrackFree("");
         setFunctional("");
         setPrice("");
+        //da
+        setCrackFree("");
+        setFunctional("");
+        setTurnOnAndFunctionNormaly("");
+        setAllTheButtonWork("");
+        setCamerasWork("");
+        setBatteryHoldsCharge("");
+        setBodyFreeOfDents("");
+        setScreenAndBackGlassUndamaged("");
+        setDisplayFreeOfDistortion("");
+        // da
         navigate("/");
       })
       .catch((error) => {
@@ -115,26 +169,31 @@ function FormPage() {
       style={{ backgroundColor: "black", width: "80%", margin: "0 auto" }}
     >
       <div className="flex justify-evenly mx-auto">
-      <img src={"1.png"} alt="" className={styles.minilogo} />
-      <div style={{ opacity: 1 ,marginTop: '-63px', display: 'flex', justifyContent: 'center'}}>
-     
-        <motion.h2
-          initial={{ opacity: 0 }}
-          transition={{
-            delay: 1,
-            duration: 1,
+        <img src={"1.png"} alt="" className={styles.minilogo} />
+        <div
+          style={{
+            opacity: 1,
+            marginTop: "-63px",
+            display: "flex",
+            justifyContent: "center",
           }}
-          viewport={{
-            once: true,
-          }}
-          whileInView={{ opacity: 1 }}
-          className={styles.header}
         >
-          
-          Start selling your iphone now
-        </motion.h2>
-        <br></br>
-      </div>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            transition={{
+              delay: 1,
+              duration: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            whileInView={{ opacity: 1 }}
+            className={styles.header}
+          >
+            Start selling your iphone now
+          </motion.h2>
+          <br></br>
+        </div>
       </div>
       <div style={{ opacity: 1, marginBottom: "70px" }}>
         <motion.h6
@@ -183,35 +242,77 @@ function FormPage() {
             />
           </label>
           <label>
-         Location of Meeting
-        <select style={{background: 'black'}} name="location" value={location} onChange={(e)=>setLocation(e.target.value)}>
-          <option value="101 G St, San Diego, CA 92101, USA">101 G St, San Diego, CA 92101, USA</option>
-          <option value="2121 Imperial Ave, San Diego, CA 92102, USA">2121 Imperial Ave, San Diego, CA 92102, USA</option>
-          <option value="3345 Sports Arena Blvd, San Diego, CA 92110, USA">3345 Sports Arena Blvd, San Diego, CA 92110, USA</option>
-          <option value="7730 Hazard Center Dr, San Diego, CA 92108, USA">7730 Hazard Center Dr, San Diego, CA 92108, USA</option>
-          <option value="1200 Highland Ave, National City, CA 91950, USA">1200 Highland Ave, National City, CA 91950, USA</option>
-          <option value="5975 University Ave, San Diego, CA 92115, USA">  5975 University Ave, San Diego, CA 92115, USA</option>
-          <option value="COLLEGE GROVE, 3412 College Ave, San Diego, CA 92115, USA">COLLEGE GROVE, 3412 College Ave, San Diego, CA 92115, USA</option>
-          <option value="3382 Murphy Canyon Rd, San Diego, CA 92123, USA">3382 Murphy Canyon Rd, San Diego, CA 92123, USA</option>
-          <option value="4840 Shawline St, San Diego, CA 92111, USA">4840 Shawline St, San Diego, CA 92111, USA</option>
-          <option value="1150 Broadway, Chula Vista, CA 91911, USA">1150 Broadway, Chula Vista, CA 91911, USA</option>
+            Location of Meeting
+            <select
+              style={{ background: "black" }}
+              name="location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            >
+              <option value="101 G St, San Diego, CA 92101, USA">
+                101 G St, San Diego, CA 92101, USA
+              </option>
+              <option value="2121 Imperial Ave, San Diego, CA 92102, USA">
+                2121 Imperial Ave, San Diego, CA 92102, USA
+              </option>
+              <option value="3345 Sports Arena Blvd, San Diego, CA 92110, USA">
+                3345 Sports Arena Blvd, San Diego, CA 92110, USA
+              </option>
+              <option value="7730 Hazard Center Dr, San Diego, CA 92108, USA">
+                7730 Hazard Center Dr, San Diego, CA 92108, USA
+              </option>
+              <option value="1200 Highland Ave, National City, CA 91950, USA">
+                1200 Highland Ave, National City, CA 91950, USA
+              </option>
+              <option value="5975 University Ave, San Diego, CA 92115, USA">
+                {" "}
+                5975 University Ave, San Diego, CA 92115, USA
+              </option>
+              <option value="COLLEGE GROVE, 3412 College Ave, San Diego, CA 92115, USA">
+                COLLEGE GROVE, 3412 College Ave, San Diego, CA 92115, USA
+              </option>
+              <option value="3382 Murphy Canyon Rd, San Diego, CA 92123, USA">
+                3382 Murphy Canyon Rd, San Diego, CA 92123, USA
+              </option>
+              <option value="4840 Shawline St, San Diego, CA 92111, USA">
+                4840 Shawline St, San Diego, CA 92111, USA
+              </option>
+              <option value="1150 Broadway, Chula Vista, CA 91911, USA">
+                1150 Broadway, Chula Vista, CA 91911, USA
+              </option>
 
-          <option value="8820 Grossmont Blvd, La Mesa, CA 91942, USA">8820 Grossmont Blvd, La Mesa, CA 91942, USA</option>
-          <option value="5500 Grossmont Center Dr, La Mesa, CA 91942, USA">5500 Grossmont Center Dr, La Mesa, CA 91942, USA</option>
-          <option value="Walmart, 575 Saturn Blvd, San Diego, CA 92154, United States">Walmart, 575 Saturn Blvd, San Diego, CA 92154, United States</option>
-          <option value="710 Dennery Rd, San Diego, CA 92154, USA">710 Dennery Rd, San Diego, CA 92154, USA</option>
-          <option value="1360 Eastlake Pkwy, Chula Vista, CA 91915, USA">1360 Eastlake Pkwy, Chula Vista, CA 91915, USA</option>
-          <option value="Panera Bread, 555 Broadway, Chula Vista, CA 91910, USA">Panera Bread, 555 Broadway, Chula Vista, CA 91910, USA</option>
-          <option value="415 Parkway Plaza, El Cajon, CA 92020, USA">415 Parkway Plaza, El Cajon, CA 92020, USA</option>
-          <option value="13425 Community Rd, Poway, CA 92064, USA">13425 Community Rd, Poway, CA 92064, USA</option>
-          <option value="732 Center Dr, San Marcos, CA 92069, USA">732 Center Dr, San Marcos, CA 92069, USA</option>
-          <option value="1330 E Grand Ave, Escondido, CA 92027, USA">1330 E Grand Ave, Escondido, CA 92027, USA</option>
-
-
-          
-        
-        </select>
-      </label>
+              <option value="8820 Grossmont Blvd, La Mesa, CA 91942, USA">
+                8820 Grossmont Blvd, La Mesa, CA 91942, USA
+              </option>
+              <option value="5500 Grossmont Center Dr, La Mesa, CA 91942, USA">
+                5500 Grossmont Center Dr, La Mesa, CA 91942, USA
+              </option>
+              <option value="Walmart, 575 Saturn Blvd, San Diego, CA 92154, United States">
+                Walmart, 575 Saturn Blvd, San Diego, CA 92154, United States
+              </option>
+              <option value="710 Dennery Rd, San Diego, CA 92154, USA">
+                710 Dennery Rd, San Diego, CA 92154, USA
+              </option>
+              <option value="1360 Eastlake Pkwy, Chula Vista, CA 91915, USA">
+                1360 Eastlake Pkwy, Chula Vista, CA 91915, USA
+              </option>
+              <option value="Panera Bread, 555 Broadway, Chula Vista, CA 91910, USA">
+                Panera Bread, 555 Broadway, Chula Vista, CA 91910, USA
+              </option>
+              <option value="415 Parkway Plaza, El Cajon, CA 92020, USA">
+                415 Parkway Plaza, El Cajon, CA 92020, USA
+              </option>
+              <option value="13425 Community Rd, Poway, CA 92064, USA">
+                13425 Community Rd, Poway, CA 92064, USA
+              </option>
+              <option value="732 Center Dr, San Marcos, CA 92069, USA">
+                732 Center Dr, San Marcos, CA 92069, USA
+              </option>
+              <option value="1330 E Grand Ave, Escondido, CA 92027, USA">
+                1330 E Grand Ave, Escondido, CA 92027, USA
+              </option>
+            </select>
+          </label>
           <label>
             Time of Meeting
             <input
@@ -297,6 +398,132 @@ function FormPage() {
               type="checkbox"
               name="crackFree"
               checked={Boolean(crackFree)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {turnOnAndFunctionNormaly ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              It turns on and functions normally?
+            </span>
+            <input
+              type="checkbox"
+              name="turnOnAndFunctionNormaly"
+              checked={Boolean(turnOnAndFunctionNormaly)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {alltheButtonWork ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              All the buttons work
+            </span>
+            <input
+              type="checkbox"
+              name="alltheButtonWork"
+              checked={Boolean(alltheButtonWork)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {camerasWork ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              The cameras work and all lenses are free of damage
+            </span>
+            <input
+              type="checkbox"
+              name="camerasWork"
+              checked={Boolean(camerasWork)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {batteryHoldsCharge ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              The battery holds a charges
+            </span>
+            <input
+              type="checkbox"
+              name="batteryHoldsCharge"
+              checked={Boolean(batteryHoldsCharge)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {bodyFreeOfDents ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              The body is free of dents and scratches
+            </span>
+            <input
+              type="checkbox"
+              name="bodyFreeOfDents"
+              checked={Boolean(bodyFreeOfDents)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {screenAndBackGlassUndamaged ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              The touchscreen and back glass are undamaged
+            </span>
+            <input
+              type="checkbox"
+              name="screenAndBackGlassUndamaged"
+              checked={Boolean(screenAndBackGlassUndamaged)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            {/* Are the front and back free of cracks? */}
+          </label>
+          <label style={{ display: "flex", alignItems: "left" }}>
+            {displayFreeOfDistortion ? (
+              <FaCheckSquare style={{ marginRight: "10px" }} />
+            ) : (
+              <FaRegSquare style={{ marginRight: "10px" }} />
+            )}
+            <span style={{ display: "inline-block", marginRight: "10px" }}>
+              The display is free of distortion, lines, and black or white spots
+            </span>
+            <input
+              type="checkbox"
+              name="displayFreeOfDistortion"
+              checked={Boolean(displayFreeOfDistortion)}
               onChange={handleCheckboxChange}
               style={{ display: "none" }}
             />

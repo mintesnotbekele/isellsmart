@@ -3,6 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home.page";
 import FormPage from "./pages/form.page";
+import NewForm from "./components/Form/NewForm";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: "/form",
     element: <FormPage />,
+  },
+  {
+    path: "/newForm",
+    element: <NewForm />,
   },
 ]);
 function App() {
