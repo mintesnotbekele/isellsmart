@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import { useMediaQuery } from "react-responsive";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
+import Ticker from "react-ticker";
 
 function Header() {
   const [index, setIndex] = useState(0);
@@ -191,18 +192,7 @@ function Header() {
         <h1 className={styles.content}>
           Get an extra 15% when you trade your old Pro Max models
         </h1>
-        {/* <p>hello</p> */}
       </div>
-      {/* <Ticker>
-        {({ index }) => (
-          <>
-            <h1 style={{ paddingRight: "0.5em" }}>
-              This is the Headline of element #{index}!
-            </h1>
-          </>
-        )}
-      </Ticker> */}
-      {/* <ScrollTicker /> */}
     </>
   );
 }

@@ -40,13 +40,12 @@ function Third() {
       </div>
       <div className={styles.bottom_container}>
         <div className={styles.bottom_container_wrapper}>
-          {isMobile && <FourthCard />}
-          {/* <FifthCard /> */}
+          {isMobile && <FifthCard />}
           <FirstCard />
           <SecondCard />
           <ThridCard />
           <FourthCard />
-
+          {/* <FifthCard /> */}
           <div></div>
           <div></div>
         </div>
