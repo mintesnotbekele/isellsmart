@@ -21,7 +21,8 @@ body {
   font-size: 3.625rem;
   font-family: Aeonik, Helvetica Neue, sans-serif;
   font-weight: 400;
-  background-color: #000;
+  /* background-color: #000; */
+  background-image: linear-gradient(to right, #010236, #010236, #030369de);
 }
 
 @media (max-width: 900px) {

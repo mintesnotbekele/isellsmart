@@ -7,7 +7,7 @@ function SixthCard() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h3 className={styles.left_header}>CRAKED GLASS? ITS OK</h3>
+        <h3 className={styles.left_header}>CRACKED GLASS? ITS OK</h3>
         <br></br>
         <p className={styles.left_p}>
           Cracked front or back glass? Its ok. Our in-house technitions have the
