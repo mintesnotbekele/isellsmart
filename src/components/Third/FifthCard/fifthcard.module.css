@@ -75,7 +75,7 @@
 }
 @media screen and (max-width: 750px) {
   .container {
-    padding: 15px 0;
+    padding: 40px 0px;
   }
   .left {
     flex-grow: 1.5;

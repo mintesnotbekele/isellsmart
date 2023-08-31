@@ -10,15 +10,16 @@
   background: black
     linear-gradient(
       180deg,
-      #d7f3f6 -22.35%,
-      rgba(215, 243, 246, 0.33) 47.17%,
-      rgba(215, 243, 246, 0) 100%
+      #fca16c -22.35%,
+      rgba(254, 213, 180, 0.328125) 47.17%,
+      rgba(254, 208, 171, 0) 100%
     );
   border-radius: 40px;
   position: sticky;
   bottom: 0px;
   z-index: 2;
   overflow: hidden;
+  padding: 20px 10px;
 }
 
 .left {
@@ -30,6 +31,7 @@
   text-align: center;
   padding: 0 10px;
 }
+
 .left_header {
   margin: 0;
   font-size: 4rem;

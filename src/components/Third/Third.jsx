@@ -34,10 +34,10 @@ function Third() {
             </span>
             <br></br>
             <br></br>
-            <span className={styles.top_header}>
+            {/* <span className={styles.top_header}>
               We’re here to make the process of selling your old phone simple
               and rewarding.
-            </span>
+            </span> */}
           </motion.h2>
         </div>
       </div>
