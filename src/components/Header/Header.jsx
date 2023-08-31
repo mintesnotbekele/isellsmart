@@ -3,7 +3,6 @@ import styles from "./header.module.css";
 import { useMediaQuery } from "react-responsive";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
-import Ticker from "react-ticker";
 
 function Header() {
   const [index, setIndex] = useState(0);

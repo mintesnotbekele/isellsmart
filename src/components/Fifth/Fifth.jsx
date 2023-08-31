@@ -17,7 +17,7 @@ function Fifth() {
           maxWidth: "max(1600px, 90%)",
         }}
       >
-        <div className={styles.top_container}>
+        {/* <div className={styles.top_container}>
           <div
             style={{
               opacity: 1,
@@ -71,7 +71,7 @@ function Fifth() {
               </h5>
             </motion.h2>
           </div>
-        </div>
+        </div> */}
         <div className={styles.bottom_container}>
           <div className={styles.bottom_wrapper}>
             <Swiper
@@ -101,7 +101,7 @@ function Fifth() {
                   trade in.
                 </p>
               </SwiperSlide>
-              <SwiperSlide className={styles.slide_item}>
+              {/* <SwiperSlide className={styles.slide_item}>
                 <p className={styles.fourth_slide_p}>
                   <span>Attendance Tracking</span>
                   <br />
@@ -122,7 +122,7 @@ function Fifth() {
                   <br />
                   participate in a club activities and events that interest
                 </p>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
           </div>
           <img

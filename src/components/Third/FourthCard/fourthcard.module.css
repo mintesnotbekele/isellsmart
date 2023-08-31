@@ -10,7 +10,7 @@
   background: black
     linear-gradient(
       180deg,
-      #b0ade9 -22.35%,
+      #adb8e9 -22.35%,
       rgba(176, 173, 233, 0.33) 47.17%,
       rgba(176, 173, 233, 0) 100%
     );
@@ -76,7 +76,7 @@
 }
 @media screen and (max-width: 750px) {
   .container {
-    padding: 15px 0;
+    padding: 40px 0px;
   }
   .left {
     flex-grow: 1.5;

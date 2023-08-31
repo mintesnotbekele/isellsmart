@@ -1,4 +1,4 @@
-export const options = [
+export const meetingLocation = [
   "101 G St, San Diego, CA 92101, USA",
   "2121 Imperial Ave, San Diego, CA 92102, USA",
   "3345 Sports Arena Blvd, San Diego, CA 92110, USA",

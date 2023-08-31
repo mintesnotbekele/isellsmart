@@ -17,10 +17,10 @@ function Second() {
       <div className={styles.second}>
         <div className={styles.second_left_half}>
           <h2 className={styles.second_left_half_header}>
-            Get your true value in seconds and
-            <h2 className={styles.second_left_half_header}>
-              get cash for your old phone.
-            </h2>
+            Get your true value in seconds and{" "}
+            {/* <h2 className={styles.second_left_half_header}> */}
+            get cash for your old phone.
+            {/* </h2> */}
           </h2>
           <button className={styles.button}>
             <a className={styles.button_anchor} href="#request-demo">

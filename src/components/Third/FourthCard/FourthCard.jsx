@@ -6,7 +6,7 @@ function FourthCard() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h3 className={styles.left_header}>FAST AND RLIABLE</h3>
+        <h3 className={styles.left_header}>FAST AND RELIABLE</h3>
         <br></br>
         <p className={styles.left_p}>
           Need it gone asap? Shoot our team a text and well make it dissapear,
