@@ -22,7 +22,7 @@ body {
   font-family: Aeonik, Helvetica Neue, sans-serif;
   font-weight: 400;
   /* background-color: #000; */
-  background-image: linear-gradient(to right, #010236, #010236, #030369de);
+  background-image: linear-gradient(to right, #001032, #001032, #002757);
 }
 
 @media (max-width: 900px) {
