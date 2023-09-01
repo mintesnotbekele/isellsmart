@@ -18,7 +18,7 @@ function Main() {
       <Fourth />
       <ServicesArea />
       <Fifth />
-      <Sixth />
+      {/* <Sixth /> */}
       <Seventh />
       <Phones />
     </div>
