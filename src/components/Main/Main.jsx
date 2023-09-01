@@ -9,17 +9,20 @@ import Third from "../Third/Third";
 import styles from "./main.module.css";
 import Phones from "../Phones/Phones";
 import ServicesArea from "../SERVICE AREAS/ServicesArea";
+import TradinModel from "../TreadinModel/TradinModel";
 function Main() {
   return (
     <div className={styles.main}>
       <First />
       <Second />
+      <TradinModel />
       <Third />
       <Fourth />
       <ServicesArea />
       <Fifth />
       {/* <Sixth /> */}
       <Seventh />
+
       <Phones />
     </div>
   );
