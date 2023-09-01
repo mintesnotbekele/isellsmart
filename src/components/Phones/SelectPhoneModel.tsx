@@ -84,22 +84,22 @@ export default function SelectPhoneModel({
       {
         name: "iPhone XS Max",
         slug: "iphone-xs-max",
-        img: "Iphone X.png",
+        img: "xs max.jpeg",
       },
       {
         name: "iPhone XS",
         slug: "iphone-xs",
-        img: "Iphone X.png",
+        img: "xs.jpeg",
       },
       {
         name: "iPhone XR",
         slug: "iphone-xr",
-        img: "Iphone X.png",
+        img: "xr.jpeg",
       },
       {
         name: "iPhone X",
         slug: "iphone-x",
-        img: "Iphone X.png",
+        img: "x.png",
       },
       {
         name: "iPhone 8 Plus",

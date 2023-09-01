@@ -12,7 +12,6 @@ function Second() {
         delay: 0.8,
         duration: 1,
       }}
-      // style={{ opacity: 1 }}
     >
       <div className={styles.second}>
         <div className={styles.second_left_half}>

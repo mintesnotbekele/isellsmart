@@ -9,9 +9,7 @@ function SeventhCard() {
       <div className={styles.left}>
         <h3 className={styles.left_header}>IT’S A WIN-WIN</h3>
         <br></br>
-        <p className={styles.left_p}>
-          You win, we win, and our land fills win.
-        </p>
+        <p className={styles.left_p}>You win, we win</p>
       </div>
       <div className={styles.right}>
         <img src={transferRisk} />

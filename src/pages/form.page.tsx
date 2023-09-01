@@ -166,9 +166,11 @@ function FormPage() {
     <form
       onSubmit={handleSubmit}
       id="request-demo"
-      style={{ backgroundColor: "black", width: "80%", margin: "0 auto" }}
+      style={{
+        backgroundImage: "linear-gradient(to right, #001032, #001032, #002757)",
+      }}
     >
-      <div className="flex justify-evenly mx-auto">
+      <div className="flex justify-evenly mx-auto container">
         <img src={"1.png"} alt="" className={styles.minilogo} />
         <div
           style={{
@@ -244,13 +246,16 @@ function FormPage() {
           <label>
             Location of Meeting
             <select
-              style={{ background: "black" }}
               name="location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             >
               {meetingLocation.map((location, index) => (
-                <option key={index} value={location}>
+                <option
+                  key={index}
+                  value={location}
+                  style={{ background: "black" }}
+                >
                   {location}
                 </option>
               ))}
@@ -489,11 +494,21 @@ function FormPage() {
               value={modeOfPayment}
               onChange={(e) => setModeOfPayment(e.target.value)}
             >
-              <option value="">Select payment method</option>
-              <option value="Cash">Cash</option>
-              <option value="Pickup">Pickup</option>
-              <option value="Paypal">Paypal</option>
-              <option value="Transfer">Transfer</option>
+              <option value="" style={{ background: "black" }}>
+                Select payment method
+              </option>
+              <option value="Cash" style={{ background: "black" }}>
+                Cash
+              </option>
+              <option value="Pickup" style={{ background: "black" }}>
+                Pickup
+              </option>
+              <option value="Paypal" style={{ background: "black" }}>
+                Paypal
+              </option>
+              <option value="Transfer" style={{ background: "black" }}>
+                Transfer
+              </option>
             </select>
           </label>
           <label>

@@ -30,8 +30,7 @@ function First() {
         }}
         path={deskleft}
         style={{
-              
-              zIndex : -1,
+          zIndex: -1,
           left: "0%",
           bottom: "-15%",
         }}
@@ -104,6 +103,7 @@ function Overlay({ style, path, size, initialAnimation, animate }) {
           <img src={path} className={styles.img} alt="" />
         </span>
       </div>
+      <div></div>
     </motion.div>
   );
 }
