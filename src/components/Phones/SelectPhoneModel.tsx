@@ -69,37 +69,37 @@ export default function SelectPhoneModel({
       {
         name: "iPhone 11 Pro Max",
         slug: "iphone-11-pro-max",
-        img: "11.jpeg",
+        img: "IPhone-11-pro-Max.png",
       },
       {
         name: "iPhone 11 Pro",
         slug: "iphone-11-pro",
-        img: "11.jpeg",
+        img: "IPhone11Pro.png",
       },
       {
         name: "iPhone 11",
         slug: "iphone-11",
-        img: "11.jpeg",
+        img: "Iphone11.png",
       },
       {
         name: "iPhone XS Max",
         slug: "iphone-xs-max",
-        img: "xs max.jpeg",
+        img: "iphone-xs-max.png",
       },
       {
         name: "iPhone XS",
         slug: "iphone-xs",
-        img: "xs.jpeg",
+        img: "iphone-xs-max.png",
       },
       {
         name: "iPhone XR",
         slug: "iphone-xr",
-        img: "xr.jpeg",
+        img: "iphonXr.png",
       },
       {
         name: "iPhone X",
         slug: "iphone-x",
-        img: "x.png",
+        img: "iphoneX.png",
       },
       {
         name: "iPhone 8 Plus",
@@ -156,6 +156,7 @@ export default function SelectPhoneModel({
           fontSize: "1.8rem",
           marginLeft: "5%",
           textAlign: "center",
+          padding: "20px 0",
         }}
       >
         Which Model Do You Have ?

@@ -3,6 +3,7 @@ import Image from "../Image";
 import styles from "./fifthcard.module.css";
 // import weakEventNavigation from "../../../assets/images/weakEventNavigation.607a8475.png";
 import FeeGouging from "../../../assets/images/feeGouging.11513ef5.png";
+import laptopFold from "/iphone/IPhone-11-pro-Max.png";
 
 function FifthCard() {
   return (
@@ -15,7 +16,7 @@ function FifthCard() {
         </p>
       </div>
       <div className={styles.right}>
-        <img src={FeeGouging} />
+        <img src={laptopFold} />
       </div>
     </div>
   );

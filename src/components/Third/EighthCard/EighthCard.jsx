@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../Image";
 import styles from "./eighthcard.module.css";
-import weakEventNavigation from "../../../assets/images/weakEventNavigation.607a8475.png";
+import laptopFold from "/iphone/iphoneX.png";
 
 function EighthCard() {
   return (
@@ -14,7 +14,7 @@ function EighthCard() {
         </p>
       </div>
       <div className={styles.right}>
-        <img src={weakEventNavigation} />
+        <img src={laptopFold} />
       </div>
     </div>
   );

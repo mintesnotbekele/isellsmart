@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* Rest of your CSS code */
-/* Rest of your CSS code */
 .header {
   text-align: center;
+  font-size: 45px;
 }
 .container {
   display: flex;
@@ -18,7 +17,6 @@
 .servicesContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   row-gap: 25px;
   column-gap: 15px;
   column-gap: 50px;
@@ -27,7 +25,6 @@
 @media (max-width: 700px) {
   .servicesContainer {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 50px;
   }
 }

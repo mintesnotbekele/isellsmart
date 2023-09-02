@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.container {
+  padding: 10px 24px;
+  margin: 40px 0;
+}
+.pageTitle {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.testimonialContainer {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(4, 1fr);
+  padding: 25px 0;
+
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.testimonialCard {
+  border: 1px solid #adabab;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 3px 1px 1px #a09999;
+  background: linear-gradient(
+    to left,
+    rgba(5, 20, 107, 0.486),
+    rgba(0, 1, 5, 0.336)
+  );
+  opacity: 0.8;
+}
+.name {
+  font-family: "Inter";
+  font-size: 18px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  letter-spacing: 0.06rem;
+}
+.detail {
+  font-size: 16px;
+  letter-spacing: 0.05rem;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+  font-family: "Inter";
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}

@@ -17,8 +17,14 @@ function Fourth() {
             viewport={{ once: true }}
             className={styles.p}
           >
-            All the reasons to trade in with iCellSmart. Including one very big.
-            We're Mobile, cash on-the-go
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-300 text-5xl text-center py-10">
+              All the reasons to trade in with iCellSmart. Including one very
+              big. We're Mobile, cash on-the-go
+            </span>
+            {/* <span className="">
+              All the reasons to trade in with iCellSmart. Including one very
+              big. We're Mobile, cash on-the-go
+            </span> */}
           </motion.p>
         </div>
       </div>

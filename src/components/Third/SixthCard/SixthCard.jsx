@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../Image";
 import styles from "./sixthcard.module.css";
-import snubbedArtists from "../../../assets/images/snubbedArtists.5210cf28.png";
+import laptopFold from "/iphone/11iphone.png";
 
 function SixthCard() {
   return (
@@ -15,7 +15,7 @@ function SixthCard() {
         </p>
       </div>
       <div className={styles.right}>
-        <img src={snubbedArtists} />
+        <img src={laptopFold} />
       </div>
     </div>
   );
