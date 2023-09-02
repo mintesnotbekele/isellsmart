@@ -19,11 +19,9 @@ function Second() {
           <h2 className={styles.second_left_half_header}>
             Get your true value in seconds and get cash for your old phone.
           </h2>
-          <button className={styles.button}>
-            <a className={styles.button_anchor} href="#request-demo">
-              Select Trade In Model
-            </a>
-          </button>
+          <a className="text-3xl font-medium mt-10 text-center w-full opacity-50">
+            Select Trade In Model
+          </a>
           <TradinModel />
         </div>
         <div className={styles.second_right_half}>

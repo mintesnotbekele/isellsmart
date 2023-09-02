@@ -11,6 +11,7 @@ import Phones from "../Phones/Phones";
 import ServicesArea from "../SERVICE AREAS/ServicesArea";
 import TradinModel from "../TreadinModel/TradinModel";
 import Testimonial from "../Testimonials/Testimonial";
+import Footer from "../Footer";
 function Main() {
   return (
     <div className={styles.main}>
@@ -24,8 +25,8 @@ function Main() {
       <Fifth />
       {/* <Sixth /> */}
       <Seventh />
-
       <Phones />
+      <Footer />
     </div>
   );
 }

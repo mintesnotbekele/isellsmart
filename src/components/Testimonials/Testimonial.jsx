@@ -3,9 +3,9 @@ import styles from "./testimonial.module.css";
 import { testimonials } from "./data";
 const Testimonial = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.pageTitle}>Testimonials</h1>
-      <section className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
+    <div className="my-10 container mx-auto">
+      <h1 className="text-center text-5xl font-semibold ">Testimonials</h1>
+      <section className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5 mt-7">
         {testimonials.map((item) => (
           <div
             key={item.id}

@@ -29,7 +29,7 @@ function Third() {
               viewport={{ once: true }}
               className={styles.top_header}
             >
-              <span className={styles.top_header_span}>
+              <span className={`${styles.top_header_span} my-10`}>
                 We understand that upgrading to the latest iphone model is an
                 exciting experience.
               </span>
@@ -39,13 +39,14 @@ function Third() {
           </div>
         </div>
       </div>
-      <div>
-        <img
-          src="/banner.jpg"
-          alt="shaking hands"
-          className={styles.bannerImage}
-        />
+
+      <div className="flex justify-center container mx-auto">
+        <video width="800" height="700" autoplay controls loop>
+          <source src="/pexels.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
+
       <div id="getReal" className={styles.container}>
         <div className={styles.bottom_container}>
           <div className={styles.bottom_container_wrapper}>
