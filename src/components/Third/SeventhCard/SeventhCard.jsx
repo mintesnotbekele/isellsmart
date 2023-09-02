@@ -9,7 +9,10 @@ function SeventhCard() {
       <div className={styles.left}>
         <h3 className={styles.left_header}>IT’S A WIN-WIN</h3>
         <br></br>
-        <p className={styles.left_p}>You win, we win</p>
+        <p className={styles.left_p}>
+          You Win, We Win, Repurpose your old device. Someone somewhere has a
+          new purpose for it.
+        </p>
       </div>
       <div className={styles.right}>
         <img src={transferRisk} />

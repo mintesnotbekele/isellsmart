@@ -2,6 +2,7 @@ import React from "react";
 import HandWithPhone from "../../assets/images/handWithIphone.7281ad73.png";
 import styles from "./second.module.css";
 import { motion } from "framer-motion";
+import TradinModel from "../TreadinModel/TradinModel";
 
 function Second() {
   return (
@@ -16,16 +17,14 @@ function Second() {
       <div className={styles.second}>
         <div className={styles.second_left_half}>
           <h2 className={styles.second_left_half_header}>
-            Get your true value in seconds and{" "}
-            {/* <h2 className={styles.second_left_half_header}> */}
-            get cash for your old phone.
-            {/* </h2> */}
+            Get your true value in seconds and get cash for your old phone.
           </h2>
           <button className={styles.button}>
             <a className={styles.button_anchor} href="#request-demo">
               Select Trade In Model
             </a>
           </button>
+          <TradinModel />
         </div>
         <div className={styles.second_right_half}>
           <span

@@ -10,15 +10,17 @@ import styles from "./main.module.css";
 import Phones from "../Phones/Phones";
 import ServicesArea from "../SERVICE AREAS/ServicesArea";
 import TradinModel from "../TreadinModel/TradinModel";
+import Testimonial from "../Testimonials/Testimonial";
 function Main() {
   return (
     <div className={styles.main}>
       <First />
       <Second />
-      <TradinModel />
+      {/* <TradinModel /> */}
       <Third />
       <Fourth />
       <ServicesArea />
+      <Testimonial />
       <Fifth />
       {/* <Sixth /> */}
       <Seventh />
