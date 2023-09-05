@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./seventh.module.css";
 import phonesImage from "../../assets/images/phonesImage.8676c2a2.png";
+import PhoneImage2 from "/Iphone-14-and-Iphone-14-Plus-PNG.png";
 import { motion } from "framer-motion";
 import deskright from "/desk-right.svg";
 import deskleft from "/desk-left.svg";
@@ -257,7 +258,7 @@ function Seventh() {
               ></img>
             </span>
             <img
-              src={phonesImage}
+              src={PhoneImage2}
               style={{
                 position: "absolute",
                 top: 0,
@@ -273,8 +274,9 @@ function Seventh() {
                 height: 0,
                 minWidth: "100%",
                 maxWidth: "100%",
-                minHeight: "100%",
+                minHeight: "70%",
                 maxHeight: "100%",
+                backgroundSize: "contain",
               }}
               alt=""
             />

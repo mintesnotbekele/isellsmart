@@ -3,13 +3,13 @@ import styles from "./testimonial.module.css";
 import { testimonials } from "./data";
 const Testimonial = () => {
   return (
-    <div className="my-10 container mx-auto">
+    <div className="my-10 container mx-auto px-10">
       <h1 className="text-center text-5xl font-semibold ">Testimonials</h1>
       <section className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5 mt-7">
         {testimonials.map((item) => (
           <div
             key={item.id}
-            className="border-[1px]  px-3 py-2 rounded-lg shadow-sm shadow-white mt-5 bg-gradient-to-r from-blue-950 opacity-90"
+            className="px-5 py-3 rounded-lg shadow-xl shadow-[#002656] mt-5 bg-gradient-to-r from-blue-950 opacity-90"
           >
             <div>
               <img
