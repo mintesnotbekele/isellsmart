@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./fifth.module.css";
-import laptopFold from "../../assets/images/transferRisk.982140b4 copy.png";
+import laptopFold from "/iPhone-11-PNG-Photo.png";
 import { motion } from "framer-motion";
 // Import Swiper styles
 import "swiper/swiper.min.css";
