@@ -41,7 +41,14 @@ function Third() {
       </div>
 
       <div className="flex justify-center container mx-auto">
-        <video width="800" height="700" autoplay controls loop>
+        <video
+          width="800"
+          height="700"
+          autoPlay
+          controls
+          loop
+          className="rounded-xl"
+        >
           <source src="/pexels.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

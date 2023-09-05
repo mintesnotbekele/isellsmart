@@ -7,11 +7,11 @@
   max-width: 1400px;
   margin: 5.125rem auto 0;
   display: flex;
-  background: black
+  background: #000c25
     linear-gradient(
       180deg,
       #ffe2c7 -22.35%,
-      rgba(254, 213, 180, 0.328125) 47.17%,
+      rgba(254, 213, 180, 0.328125) 60.17%,
       rgba(254, 208, 171, 0) 100%
     );
   border-radius: 40px;
