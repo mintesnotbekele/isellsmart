@@ -57,7 +57,7 @@ function Third() {
       <div id="getReal" className={styles.container}>
         <div className={styles.bottom_container}>
           <div className={styles.bottom_container_wrapper}>
-            {isMobile && <FourthCard />}
+            <div className="container">{isMobile && <FourthCard />}</div>
             <FirstCard />
             <SecondCard />
             <ThridCard />

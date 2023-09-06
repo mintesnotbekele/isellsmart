@@ -15,15 +15,15 @@ const Footer = () => {
         </h1>
         <div className="container flex justify-between items-center gap-2 py-3 px-5 ">
           <div className="flex gap-2 p">
-            <a href="#" className="text-lg font-medium">
+            <a href="#" className="text-base sm:text-lg font-medium">
               Privacy Policy
             </a>
-            <a href="#" className="text-lg font-medium">
+            <a href="#" className="text-base sm:text-lg font-medium">
               | Terms And Conditions
             </a>
           </div>
           <div className="grid gap-x-2">
-            <h1 className="text-lg font-medium underline underline-offset-2	">
+            <h1 className="text-base sm:text-lg font-medium underline underline-offset-2 whitespace-nowrap">
               CONTACT US
             </h1>
             <div className="flex gap-x-2">
