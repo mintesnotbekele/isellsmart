@@ -170,12 +170,11 @@ function FormPage() {
         backgroundImage: "linear-gradient(to right, #001032, #001032, #002757)",
       }}
     >
-      <div className="flex justify-evenly mx-auto container">
-        <img src={"1.png"} alt="" className={styles.minilogo} />
+      <div className="flex justify-evenly mx-auto container mt-16">
+        <img src={"/Final.png"} alt="" className={styles.minilogo} />
         <div
           style={{
             opacity: 1,
-            marginTop: "-63px",
             display: "flex",
             justifyContent: "center",
           }}
@@ -268,6 +267,15 @@ function FormPage() {
               name="meetingDate"
               value={meetingDate}
               onChange={(e) => setMeetingDate(e.target.value)}
+            />
+          </label>
+          <label>
+            Price
+            <input
+              type="number"
+              name="price"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
             />
           </label>
         </div>
@@ -478,15 +486,7 @@ function FormPage() {
             {/* Are the front and back free of cracks? */}
           </label>
           <br></br>
-          <label>
-            Price
-            <input
-              type="number"
-              name="price"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-            />
-          </label>
+
           <label>
             Payment Method
             <select
@@ -545,21 +545,11 @@ function FormPage() {
         </div>
       </div>
 
-      <div className="form-buttons" style={{ textAlign: "right" }}>
+      <div className="rounded-md flex justify-center max-w-xs mx-auto mt-3 ">
         <button
           disabled={isSubmitting}
           type="submit"
-          style={{
-            backgroundColor: "white",
-            color: "black",
-            padding: "12px 24px",
-            borderRadius: "5px",
-            fontWeight: "bold",
-            fontSize: "16px",
-            border: "none",
-            cursor: "pointer",
-            transition: "all 0.3s ease-in-out",
-          }}
+          className="w-full py-3 bg-white text-blue-700 hover:-translate-y-1 hover:border-2 hover:border-white hover:text-white hover:bg-blue-700"
         >
           {isSubmitting ? "Submitting Please wait..." : "Submit"}
         </button>
