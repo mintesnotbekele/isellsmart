@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 .container {
   display: flex;
   flex-direction: row;
@@ -19,7 +21,7 @@
   bottom: 0px;
   z-index: 1;
   overflow: hidden;
-  padding: 45px 0px;
+  padding: 50px 0px;
 }
 
 .left {
@@ -38,6 +40,7 @@
 .left_p {
   margin: 0;
   font-size: 2rem;
+  font-family: "Inter";
 }
 .right {
   display: flex;
@@ -115,7 +118,7 @@
   .container {
     flex-direction: column;
     padding: 50px 0;
-    margin: 30px 30px;
+    row-gap: 10px;
   }
   .left_header {
     font-size: 1.8rem;
